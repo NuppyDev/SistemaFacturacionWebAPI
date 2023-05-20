@@ -2,5 +2,6 @@
 {
     public class Historical
     {
+        public int InvoiceId { get; set; }
     }
 }

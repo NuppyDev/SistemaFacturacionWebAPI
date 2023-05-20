@@ -16,5 +16,6 @@ namespace WebAPI.Models
         public DateTime DateAdmission { get; set; }
 
         public IList<Tables> Tables { get; set; }
+        public IList<Invoice> Invoices { get; set; }
     }
 }

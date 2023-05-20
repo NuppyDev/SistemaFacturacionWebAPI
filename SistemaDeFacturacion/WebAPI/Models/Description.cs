@@ -16,6 +16,6 @@ namespace WebAPI.Models
         public decimal Total { get; set; }
         public decimal Pay { get; set; }
         public decimal Change { get; set; }
-
+        public IList<Products> Products { get; set; }
     }
 }

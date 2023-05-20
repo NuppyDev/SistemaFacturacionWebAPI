@@ -10,7 +10,7 @@ namespace WebAPI.Models
         public int TableId { get; set; }
 
         public int EmployeeId { get; set;}
-
+        public IList<Invoice> Invoices { get; set; }
         public Employees Employees { get; set; }
     }
 }

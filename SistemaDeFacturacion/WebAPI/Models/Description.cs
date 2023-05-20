@@ -1,7 +1,12 @@
-﻿namespace WebAPI.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace WebAPI.Models
 {
     public class Description
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
         public int InvoiceId { get; set; }
         public int ProductsId { get; set; }

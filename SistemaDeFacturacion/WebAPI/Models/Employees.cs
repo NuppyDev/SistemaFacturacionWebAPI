@@ -5,6 +5,8 @@ namespace WebAPI.Models
 {
     public class Employees
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeId { get; set; }
 
         public string EmployeeFullName { get; set; }

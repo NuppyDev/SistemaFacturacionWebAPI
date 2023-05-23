@@ -8,11 +8,14 @@ namespace WebAPI.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeId { get; set; }
-
+        [Required]
+        [Column("NombreEmpleado")]
         public string EmployeeFullName { get; set; }
-
+        [Required]
+        [Column("Cumpleaños")]
         public DateTime Birthday { get; set; }
-
+        [Required]
+        [Column("FechaDeIngreso")]
         public DateTime DateAdmission { get; set; }
 
         public IList<Tables> Tables { get; set; }

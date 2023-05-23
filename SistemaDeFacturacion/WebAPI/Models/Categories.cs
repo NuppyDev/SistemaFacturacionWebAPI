@@ -8,6 +8,8 @@ namespace WebAPI.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
+        [Required]
+        [Column("Categoría")]
         public string CategoryName { get; set; }
         public IList<Products> Products { get; set; }
     }

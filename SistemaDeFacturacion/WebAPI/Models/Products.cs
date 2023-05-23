@@ -9,9 +9,14 @@ namespace WebAPI.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductsId { get; set; }
         public int CategoryId { get; set; }
-        public string Name { get; set; }
-        public decimal UnitPrice { get; set; }
         public Categories Categories { get; set; }
+        [Required]
+        [Column("NombreDelProducto")]
+        public string Name { get; set; }
+        [Required]
+        [Column("PrecioUnitario")]
+        public decimal UnitPrice { get; set; }
+        public int DescriptionId { get; set; }
         public Description Description { get; set; }
     }
 }

@@ -8,9 +8,8 @@ namespace WebAPI.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TableId { get; set; }
-
-        public int EmployeeId { get; set;}
-        public IList<Invoice> Invoices { get; set; }
+        public int EmployeeId { get; set; }
         public Employees Employees { get; set; }
+        public IList<Invoice> Invoices { get; set; }
     }
 }

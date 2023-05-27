@@ -19,3 +19,8 @@ D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\System.Management.dll
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.csproj.CopyComplete
+D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmCatalogue.resources
+D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmHistory.resources
+D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInformation.resources
+D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInitiation.resources
+D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.Properties.Resources.resources

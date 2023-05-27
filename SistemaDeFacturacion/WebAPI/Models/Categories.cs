@@ -11,6 +11,6 @@ namespace WebAPI.Models
         [Required]
         [Column("Categoría")]
         public string CategoryName { get; set; }
-        public IList<Products> Products { get; set; }
+        public ICollection<Products> Products { get; } = new List<Products>();
     }
 }

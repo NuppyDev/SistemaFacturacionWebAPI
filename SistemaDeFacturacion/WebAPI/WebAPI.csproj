@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -20,6 +19,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="Models\Dto\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

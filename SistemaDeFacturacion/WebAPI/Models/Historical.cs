@@ -8,7 +8,7 @@ namespace WebAPI.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int HistoricalId { get; set; }
-        public IList<Invoice> Invoices { get; set; }
+        public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
 
     }
 }

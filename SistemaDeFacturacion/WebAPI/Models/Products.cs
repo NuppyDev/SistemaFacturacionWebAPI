@@ -9,7 +9,7 @@ namespace WebAPI.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductsId { get; set; }
         public int CategoryId { get; set; }
-        public Categories Categories { get; set; }
+        public Categories Categories { get; set; } = null!;
         [Required]
         [Column("NombreDelProducto")]
         public string Name { get; set; }
@@ -17,6 +17,6 @@ namespace WebAPI.Models
         [Column("PrecioUnitario")]
         public decimal UnitPrice { get; set; }
         public int DescriptionId { get; set; }
-        public Description Description { get; set; }
+        public Description Description { get; set; } = null!;
     }
 }

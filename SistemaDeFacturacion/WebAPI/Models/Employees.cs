@@ -17,8 +17,8 @@ namespace WebAPI.Models
         [Required]
         [Column("FechaDeIngreso")]
         public DateTime DateAdmission { get; set; }
-
-        public IList<Tables> Tables { get; set; }
-        public IList<Invoice> Invoices { get; set; }
+        public ICollection<Tables> Tables { get; } = new List<Tables>();
+        public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
     }
+}
 }

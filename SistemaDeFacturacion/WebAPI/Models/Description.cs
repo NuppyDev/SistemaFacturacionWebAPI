@@ -9,9 +9,9 @@ namespace WebAPI.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
         public int InvoiceId { get; set; }
-        public Invoice Invoice { get; set; }
+        public Invoice Invoice { get; set; } = null!;
         public int ProductsId { get; set; }
-        public Products Products { get; set; }
+        public Products Products { get; set; } = null!;
         [Required]
         [Column("Cantidad")]
         public int Cant { get; set; }

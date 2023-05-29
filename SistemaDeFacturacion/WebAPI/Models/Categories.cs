@@ -7,7 +7,7 @@ namespace WebAPI.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CategoryId { get; set; }
+        public int CategoriesId { get; set; }
         [Required]
         [Column("Categoría")]
         public string CategoryName { get; set; }

@@ -9,7 +9,6 @@ namespace WebAPI.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvoiceId { get; set; }
         public int HistoricalId { get; set; }
-        public Historical Historical { get; set; } = null!;
         public int TableId { get; set; }
         public Tables Tables { get; set; } = null!;
         public int EmployeeId { get; set; }

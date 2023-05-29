@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RuFjCPOtobVmvQTPeGpAE4FoSOi4w7/PVIMeG7KtD2rrX2RkgVVbehXpMNk+McaqU6VkvHBOJA368e4nEVPz3w==",
+  "dgSpecHash": "KpnLIkcvSNew16p5WejuTXvFxfC/URJx4/8uzCLzNrmOWiZUHWUeX7n+LNRam97zGUOyc0Lsp79Y8RRLvHNpFQ==",
   "success": true,
-  "projectFilePath": "D:\\GIT PROG\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DEFAULT.DESKTOP-I9RBSSV\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
-    "C:\\Users\\DEFAULT.DESKTOP-I9RBSSV\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\DEFAULT.DESKTOP-I9RBSSV\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

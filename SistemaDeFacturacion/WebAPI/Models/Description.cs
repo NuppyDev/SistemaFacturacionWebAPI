@@ -24,11 +24,5 @@ namespace WebAPI.Models
         [Required]
         [Column("Total")]
         public decimal Total { get; set; }
-        [Required]
-        [Column("Pagó")]
-        public decimal Pay { get; set; }
-        [Required]
-        [Column("Vuelto")]
-        public decimal Change { get; set; }
     }
 }

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SistemaDeFacturacion",
+    "\\SistemaDeFacturacion\\VisualWebAPI",
+    "\\SistemaDeFacturacion\\WebAPI",
+    "\\SistemaDeFacturacion\\WebAPI\\Models"
   ],
-  "SelectedNode": "\\SistemaDeFacturacion.sln",
+  "SelectedNode": "\\SistemaDeFacturacion\\WebAPI\\Models\\Tables.cs",
   "PreviewInSolutionExplorer": false
 }

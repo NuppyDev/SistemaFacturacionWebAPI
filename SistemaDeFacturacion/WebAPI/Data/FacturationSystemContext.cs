@@ -7,6 +7,7 @@ namespace WebAPI.Data
 {
     public class FacturationSystemContext : DbContext
     {
+        public FacturationSystemContext(DbContextOptions<FacturationSystemContext> options) : base(options) { }
         public DbSet<Invoice> facturas { get; set; }
         public DbSet<Description> description { get; set; }
         public DbSet<Categories> categories { get; set; }
@@ -14,17 +15,62 @@ namespace WebAPI.Data
         public DbSet<Historical> historical { get; set; }
         public DbSet<Products> products { get; set; }
         public DbSet<Tables> tables { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["constring"].ToString());
-        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Employees>()
+                .HasMany(e => e.Tables)
+                .WithOne()
+                .HasForeignKey(e => e.EmployeeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Historical>()
+                .HasMany(e => e.Invoices)
+                .WithOne()
+                .HasForeignKey(e => e.HistoricalId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Categories>()
+                .HasMany(e => e.Products)
+                .WithOne()
+                .HasForeignKey(e => e.CategoriesId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Description>()
                 .HasOne(e => e.Products)
                 .WithOne(e => e.Description)
                 .HasForeignKey<Products>(e => e.DescriptionId)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Invoice>()
+            .HasOne(e => e.Tables)
+            .WithMany(e => e.Invoices)
+            .HasForeignKey(e => e.TableId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Invoice>()
+            .HasOne(e => e.Employees)
+            .WithMany(e => e.Invoices)
+            .HasForeignKey(e => e.EmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Description>()
+            .HasOne(e => e.Invoice)
+            .WithMany(e => e.Descriptions)
+            .HasForeignKey(e => e.InvoiceId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Employees>().HasData(
+                new Employees() { EmployeeId = 1, EmployeeFullName = "Stephanie Tenorio", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") },
+                new Employees() { EmployeeId = 2, EmployeeFullName = "Carolina Orozco", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") }
+                );
+            modelBuilder.Entity<Tables>().HasData(
+                new Tables() { TableId = 1, EmployeeId = 1 },
+                new Tables() { TableId = 2, EmployeeId = 2 },
+                new Tables() { TableId = 3, EmployeeId = 1 },
+                new Tables() { TableId = 4, EmployeeId = 2 },
+                new Tables() { TableId = 5, EmployeeId = 1 },
+                new Tables() { TableId = 6, EmployeeId = 2 }
+                );
         }
     }
 }

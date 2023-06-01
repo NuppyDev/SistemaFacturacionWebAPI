@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebAPI.Models
+namespace WebAPI.Models.Clases
 {
     public class Invoice
     {
@@ -11,8 +11,8 @@ namespace WebAPI.Models
         public int HistoricalId { get; set; }
         public int TableId { get; set; }
         public Tables Tables { get; set; } = null!;
-        public int EmployeeId { get; set; }
-        public Employees Employees { get; set; } = null!;
+        public int WaitersId { get; set; }
+        public Waiters Waiters { get; set; } = null!;
         public int DescriptionId { get; set; }
         public ICollection<Description> Descriptions { get; } = new List<Description>();
         public DateTime CreatedDate { get; set; }

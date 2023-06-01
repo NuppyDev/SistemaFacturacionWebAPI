@@ -1,14 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebAPI.Models
+namespace WebAPI.Models.Clases
 {
-    public class Historical
+    public class Tables
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int HistoricalId { get; set; }
+        public int TableId { get; set; }
+        public int WaitersId { get; set; }
         public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
-
     }
 }

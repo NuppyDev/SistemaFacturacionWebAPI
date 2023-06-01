@@ -1,16 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebAPI.Models
+namespace WebAPI.Models.Clases
 {
-    public class Employees
+    public class Waiters
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int EmployeeId { get; set; }
+        public int WaitersId { get; set; }
         [Required]
-        [Column("NombreEmpleado")]
-        public string EmployeeFullName { get; set; }
+        [Column("Nombre Mesero")]
+        public string WaitersFullName { get; set; }
         [Required]
         [Column("Cumpleaños")]
         public DateTime Birthday { get; set; }

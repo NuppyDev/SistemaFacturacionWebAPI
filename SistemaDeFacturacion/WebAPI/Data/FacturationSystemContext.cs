@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using WebAPI.Models;
+using WebAPI.Models.Clases;
 
 namespace WebAPI.Data
 {
@@ -11,13 +11,13 @@ namespace WebAPI.Data
         public DbSet<Invoice> facturas { get; set; }
         public DbSet<Description> description { get; set; }
         public DbSet<Categories> categories { get; set; }
-        public DbSet<Employees> employees { get; set; }
+        public DbSet<Waiters> employees { get; set; }
         public DbSet<Historical> historical { get; set; }
         public DbSet<Products> products { get; set; }
         public DbSet<Tables> tables { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employees>()
+            modelBuilder.Entity<Waiters>()
                 .HasMany(e => e.Tables)
                 .WithOne()
                 .HasForeignKey(e => e.EmployeeId)
@@ -59,9 +59,9 @@ namespace WebAPI.Data
             .HasForeignKey(e => e.InvoiceId)
             .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Employees>().HasData(
-                new Employees() { EmployeeId = 1, EmployeeFullName = "Stephanie Tenorio", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") },
-                new Employees() { EmployeeId = 2, EmployeeFullName = "Carolina Orozco", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") }
+            modelBuilder.Entity<Waiters>().HasData(
+                new Waiters() { EmployeeId = 1, EmployeeFullName = "Stephanie Tenorio", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") },
+                new Waiters() { EmployeeId = 2, EmployeeFullName = "Carolina Orozco", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") }
                 );
             modelBuilder.Entity<Tables>().HasData(
                 new Tables() { TableId = 1, EmployeeId = 1 },

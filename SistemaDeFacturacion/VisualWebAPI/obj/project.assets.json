@@ -147,11 +147,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
       "projectName": "VisualWebAPI",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -8,13 +8,13 @@ namespace WebAPI.Data
     public class FacturationSystemContext : DbContext
     {
         public FacturationSystemContext(DbContextOptions<FacturationSystemContext> options) : base(options) { }
-        public DbSet<Invoice> facturas { get; set; }
-        public DbSet<Description> description { get; set; }
-        public DbSet<Categories> categories { get; set; }
-        public DbSet<Waiters> employees { get; set; }
-        public DbSet<Historical> historical { get; set; }
-        public DbSet<Products> products { get; set; }
-        public DbSet<Tables> tables { get; set; }
+        public DbSet<Invoice> Facturas { get; set; }
+        public DbSet<Description> Description { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Waiters> Waiters { get; set; }
+        public DbSet<Historical> Historical { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<Tables> Tables { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Waiters>()

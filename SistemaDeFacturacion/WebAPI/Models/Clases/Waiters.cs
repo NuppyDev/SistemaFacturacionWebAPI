@@ -11,14 +11,11 @@ namespace WebAPI.Models.Clases
         [Required]
         [Column("Nombre Mesero")]
         public string WaitersFullName { get; set; }
-        [Required]
         [Column("Cumpleaños")]
         public DateTime Birthday { get; set; }
-        [Required]
         [Column("FechaDeIngreso")]
         public DateTime DateAdmission { get; set; }
         public ICollection<Tables> Tables { get; } = new List<Tables>();
         public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
     }
-}
 }

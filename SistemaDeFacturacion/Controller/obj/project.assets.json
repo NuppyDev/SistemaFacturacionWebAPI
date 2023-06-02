@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\Controller\\Controller.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\SistemaDeFacturacion\\Controller\\Controller.csproj",
       "projectName": "Controller",
-      "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\Controller\\Controller.csproj",
+      "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaDeFacturacion\\Controller\\Controller.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\Controller\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\source\\repos\\SistemaDeFacturacion\\Controller\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

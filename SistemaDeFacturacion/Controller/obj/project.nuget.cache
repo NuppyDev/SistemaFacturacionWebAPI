@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ugkKTdUjyvP47tyPFrLxnnwQhwE6ZVmXnST7hEscsQt1x85W4dBN247fjOstnhCTEdUNfCnpoVkiKZiBQIjfSg==",
+  "dgSpecHash": "WbJV4rIARWLOhCzQuEPuqAuT6LEeQ5p2plXiuvO2DVcD0k2ojuOvNF+90rkuI3tkCTOpKonflZZcKmJsJ/7uxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Source\\Repos\\StephTeno\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\Controller\\Controller.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaDeFacturacion\\Controller\\Controller.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

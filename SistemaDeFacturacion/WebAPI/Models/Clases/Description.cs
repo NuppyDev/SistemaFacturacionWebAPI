@@ -8,8 +8,6 @@ namespace WebAPI.Models.Clases
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
-        public int InvoiceId { get; set; }
-        public Invoice Invoice { get; set; } = null!;
         public int ProductsId { get; set; }
         public Products Products { get; set; } = null!;
         [Required]

@@ -24,3 +24,29 @@ D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInformation.resources
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInitiation.resources
 D:\GIT PROG\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\VisualWebAPI.exe
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\VisualWebAPI.deps.json
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\VisualWebAPI.runtimeconfig.json
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\VisualWebAPI.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\VisualWebAPI.pdb
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.csproj.AssemblyReference.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmCatalogue.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmHistory.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInformation.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInicioSala.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmInitiation.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.csproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.AssemblyInfoInputs.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.AssemblyInfo.cs
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.csproj.CopyComplete
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\refint\VisualWebAPI.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.pdb
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\VisualWebAPI.genruntimeconfig.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualWebAPI\obj\Debug\net6.0-windows\ref\VisualWebAPI.dll

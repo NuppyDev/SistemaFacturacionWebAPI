@@ -1,0 +1,12 @@
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\Controller.deps.json
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\Controller.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\Controller.pdb
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.csproj.AssemblyReference.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.AssemblyInfoInputs.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.AssemblyInfo.cs
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\refint\Controller.dll
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.pdb
+C:\Users\Usuario\Source\Repos\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\ref\Controller.dll

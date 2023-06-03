@@ -9,11 +9,8 @@ namespace WebAPI.Models.Clases
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int WaitersId { get; set; }
         [Required]
-        [Column("Nombre Mesero")]
         public string WaitersFullName { get; set; }
-        [Column("Cumpleaños")]
         public DateTime Birthday { get; set; }
-        [Column("FechaDeIngreso")]
         public DateTime DateAdmission { get; set; }
         public ICollection<Tables> Tables { get; } = new List<Tables>();
         public ICollection<Invoice> Invoices { get; } = new List<Invoice>();

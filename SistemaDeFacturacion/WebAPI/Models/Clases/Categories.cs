@@ -9,7 +9,6 @@ namespace WebAPI.Models.Clases
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoriesId { get; set; }
         [Required]
-        [Column("Categoría")]
         public string CategoryName { get; set; }
         public ICollection<Products> Products { get; } = new List<Products>();
     }

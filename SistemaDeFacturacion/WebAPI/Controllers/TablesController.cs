@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Models.Dto.Base.WaitersCreateDto>> GetTables(int id)
+        public async Task<ActionResult<WaitersCreateDto>> GetTables(int id)
         {
             if (id == 0)
                 return BadRequest();

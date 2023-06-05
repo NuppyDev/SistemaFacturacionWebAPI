@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using WebAPI.Models.Clases;
-using WebAPI.Models.Dto;
+using WebAPI.Models.Dto.Base;
 
 namespace WebAPI.Models.Mapping
 {
@@ -8,7 +8,7 @@ namespace WebAPI.Models.Mapping
     {
         public MappingConfig() 
         {
-            CreateMap<Waiters, WaitersDto>().ReverseMap();
+            CreateMap<Waiters, WaitersCreateDto>().ReverseMap();
         }
     }
 }

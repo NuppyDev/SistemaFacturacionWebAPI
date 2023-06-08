@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelTCM = new Panel();
             tcMenu = new TabControl();
             tpBebida = new TabPage();
@@ -59,6 +59,7 @@
             lblCantComprar = new Label();
             lblPrecio = new Label();
             pictureBox1 = new PictureBox();
+            ImprimirFactura = new System.Drawing.Printing.PrintDocument();
             panelTCM.SuspendLayout();
             tcMenu.SuspendLayout();
             tpBebida.SuspendLayout();
@@ -73,7 +74,7 @@
             panelTCM.Controls.Add(tcMenu);
             panelTCM.Dock = DockStyle.Bottom;
             panelTCM.Location = new Point(0, 221);
-            panelTCM.Margin = new Padding(2, 2, 2, 2);
+            panelTCM.Margin = new Padding(2);
             panelTCM.Name = "panelTCM";
             panelTCM.Size = new Size(623, 370);
             panelTCM.TabIndex = 1;
@@ -85,7 +86,7 @@
             tcMenu.Dock = DockStyle.Fill;
             tcMenu.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             tcMenu.Location = new Point(0, 0);
-            tcMenu.Margin = new Padding(2, 2, 2, 2);
+            tcMenu.Margin = new Padding(2);
             tcMenu.Name = "tcMenu";
             tcMenu.SelectedIndex = 0;
             tcMenu.Size = new Size(623, 370);
@@ -103,9 +104,9 @@
             tpBebida.Cursor = Cursors.Hand;
             tpBebida.ForeColor = Color.White;
             tpBebida.Location = new Point(4, 25);
-            tpBebida.Margin = new Padding(2, 2, 2, 2);
+            tpBebida.Margin = new Padding(2);
             tpBebida.Name = "tpBebida";
-            tpBebida.Padding = new Padding(2, 2, 2, 2);
+            tpBebida.Padding = new Padding(2);
             tpBebida.Size = new Size(615, 341);
             tpBebida.TabIndex = 0;
             tpBebida.Text = "BEBIDA";
@@ -120,7 +121,7 @@
             btnBebida3.ForeColor = Color.White;
             btnBebida3.ImageAlign = ContentAlignment.BottomRight;
             btnBebida3.Location = new Point(427, 24);
-            btnBebida3.Margin = new Padding(2, 2, 2, 2);
+            btnBebida3.Margin = new Padding(2);
             btnBebida3.Name = "btnBebida3";
             btnBebida3.Size = new Size(140, 114);
             btnBebida3.TabIndex = 42;
@@ -138,7 +139,7 @@
             btnBebida6.ForeColor = Color.White;
             btnBebida6.ImageAlign = ContentAlignment.BottomRight;
             btnBebida6.Location = new Point(427, 189);
-            btnBebida6.Margin = new Padding(2, 2, 2, 2);
+            btnBebida6.Margin = new Padding(2);
             btnBebida6.Name = "btnBebida6";
             btnBebida6.Size = new Size(140, 114);
             btnBebida6.TabIndex = 41;
@@ -156,7 +157,7 @@
             btnBebida5.ForeColor = Color.White;
             btnBebida5.ImageAlign = ContentAlignment.BottomRight;
             btnBebida5.Location = new Point(236, 189);
-            btnBebida5.Margin = new Padding(2, 2, 2, 2);
+            btnBebida5.Margin = new Padding(2);
             btnBebida5.Name = "btnBebida5";
             btnBebida5.Size = new Size(140, 114);
             btnBebida5.TabIndex = 40;
@@ -174,7 +175,7 @@
             btnBebida2.ForeColor = Color.White;
             btnBebida2.ImageAlign = ContentAlignment.BottomRight;
             btnBebida2.Location = new Point(236, 24);
-            btnBebida2.Margin = new Padding(2, 2, 2, 2);
+            btnBebida2.Margin = new Padding(2);
             btnBebida2.Name = "btnBebida2";
             btnBebida2.Size = new Size(140, 114);
             btnBebida2.TabIndex = 39;
@@ -192,7 +193,7 @@
             btnBebida4.ForeColor = Color.White;
             btnBebida4.ImageAlign = ContentAlignment.BottomRight;
             btnBebida4.Location = new Point(44, 189);
-            btnBebida4.Margin = new Padding(2, 2, 2, 2);
+            btnBebida4.Margin = new Padding(2);
             btnBebida4.Name = "btnBebida4";
             btnBebida4.Size = new Size(140, 114);
             btnBebida4.TabIndex = 38;
@@ -210,7 +211,7 @@
             btnBebida1.ForeColor = Color.White;
             btnBebida1.ImageAlign = ContentAlignment.BottomRight;
             btnBebida1.Location = new Point(44, 24);
-            btnBebida1.Margin = new Padding(2, 2, 2, 2);
+            btnBebida1.Margin = new Padding(2);
             btnBebida1.Name = "btnBebida1";
             btnBebida1.Size = new Size(140, 114);
             btnBebida1.TabIndex = 37;
@@ -228,9 +229,9 @@
             tpComida.Controls.Add(btnComida4);
             tpComida.Controls.Add(btnComida1);
             tpComida.Location = new Point(4, 25);
-            tpComida.Margin = new Padding(2, 2, 2, 2);
+            tpComida.Margin = new Padding(2);
             tpComida.Name = "tpComida";
-            tpComida.Padding = new Padding(2, 2, 2, 2);
+            tpComida.Padding = new Padding(2);
             tpComida.Size = new Size(615, 341);
             tpComida.TabIndex = 1;
             tpComida.Text = "COMIDA";
@@ -246,7 +247,7 @@
             btnComida3.ForeColor = Color.White;
             btnComida3.ImageAlign = ContentAlignment.BottomRight;
             btnComida3.Location = new Point(426, 30);
-            btnComida3.Margin = new Padding(2, 2, 2, 2);
+            btnComida3.Margin = new Padding(2);
             btnComida3.Name = "btnComida3";
             btnComida3.Size = new Size(140, 114);
             btnComida3.TabIndex = 48;
@@ -265,7 +266,7 @@
             btnComida6.ForeColor = Color.White;
             btnComida6.ImageAlign = ContentAlignment.BottomRight;
             btnComida6.Location = new Point(426, 192);
-            btnComida6.Margin = new Padding(2, 2, 2, 2);
+            btnComida6.Margin = new Padding(2);
             btnComida6.Name = "btnComida6";
             btnComida6.Size = new Size(140, 114);
             btnComida6.TabIndex = 47;
@@ -284,7 +285,7 @@
             btnComida5.ForeColor = Color.White;
             btnComida5.ImageAlign = ContentAlignment.BottomRight;
             btnComida5.Location = new Point(235, 192);
-            btnComida5.Margin = new Padding(2, 2, 2, 2);
+            btnComida5.Margin = new Padding(2);
             btnComida5.Name = "btnComida5";
             btnComida5.Size = new Size(140, 114);
             btnComida5.TabIndex = 46;
@@ -303,7 +304,7 @@
             btnComida2.ForeColor = Color.White;
             btnComida2.ImageAlign = ContentAlignment.BottomRight;
             btnComida2.Location = new Point(235, 30);
-            btnComida2.Margin = new Padding(2, 2, 2, 2);
+            btnComida2.Margin = new Padding(2);
             btnComida2.Name = "btnComida2";
             btnComida2.Size = new Size(140, 114);
             btnComida2.TabIndex = 45;
@@ -322,7 +323,7 @@
             btnComida4.ForeColor = Color.White;
             btnComida4.ImageAlign = ContentAlignment.BottomRight;
             btnComida4.Location = new Point(43, 192);
-            btnComida4.Margin = new Padding(2, 2, 2, 2);
+            btnComida4.Margin = new Padding(2);
             btnComida4.Name = "btnComida4";
             btnComida4.Size = new Size(140, 114);
             btnComida4.TabIndex = 44;
@@ -341,7 +342,7 @@
             btnComida1.ForeColor = Color.White;
             btnComida1.ImageAlign = ContentAlignment.BottomRight;
             btnComida1.Location = new Point(43, 30);
-            btnComida1.Margin = new Padding(2, 2, 2, 2);
+            btnComida1.Margin = new Padding(2);
             btnComida1.Name = "btnComida1";
             btnComida1.Size = new Size(140, 114);
             btnComida1.TabIndex = 43;
@@ -357,7 +358,7 @@
             panelDgv.Controls.Add(dgvDatos);
             panelDgv.Dock = DockStyle.Right;
             panelDgv.Location = new Point(623, 0);
-            panelDgv.Margin = new Padding(2, 2, 2, 2);
+            panelDgv.Margin = new Padding(2);
             panelDgv.Name = "panelDgv";
             panelDgv.Size = new Size(347, 591);
             panelDgv.TabIndex = 1;
@@ -372,12 +373,13 @@
             btnImprimir.FlatStyle = FlatStyle.Flat;
             btnImprimir.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnImprimir.Location = new Point(202, 491);
-            btnImprimir.Margin = new Padding(2, 2, 2, 2);
+            btnImprimir.Margin = new Padding(2);
             btnImprimir.Name = "btnImprimir";
             btnImprimir.Size = new Size(130, 44);
             btnImprimir.TabIndex = 3;
             btnImprimir.Text = "Imprimir";
             btnImprimir.UseVisualStyleBackColor = false;
+            btnImprimir.Click += btnImprimir_Click;
             // 
             // btnCancelar
             // 
@@ -389,7 +391,7 @@
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelar.Location = new Point(14, 491);
-            btnCancelar.Margin = new Padding(2, 2, 2, 2);
+            btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(130, 44);
             btnCancelar.TabIndex = 2;
@@ -407,46 +409,46 @@
             dgvDatos.BorderStyle = BorderStyle.None;
             dgvDatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvDatos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle13.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvDatos.ColumnHeadersHeight = 45;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.Window;
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            dgvDatos.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvDatos.EnableHeadersVisualStyles = false;
             dgvDatos.GridColor = Color.Maroon;
             dgvDatos.Location = new Point(14, 43);
-            dgvDatos.Margin = new Padding(1, 1, 1, 1);
+            dgvDatos.Margin = new Padding(1);
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.Salmon;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle15.ForeColor = Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.Salmon;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvDatos.RowHeadersWidth = 62;
-            dataGridViewCellStyle16.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle16.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle16.ForeColor = Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle16.SelectionForeColor = Color.White;
-            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvDatos.RowTemplate.Height = 33;
             dgvDatos.Size = new Size(318, 341);
             dgvDatos.TabIndex = 2;
@@ -461,7 +463,7 @@
             btnMas.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnMas.FlatStyle = FlatStyle.Flat;
             btnMas.Location = new Point(363, 113);
-            btnMas.Margin = new Padding(2, 2, 2, 2);
+            btnMas.Margin = new Padding(2);
             btnMas.Name = "btnMas";
             btnMas.Size = new Size(60, 49);
             btnMas.TabIndex = 3;
@@ -477,7 +479,7 @@
             btnMenos.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnMenos.FlatStyle = FlatStyle.Flat;
             btnMenos.Location = new Point(244, 113);
-            btnMenos.Margin = new Padding(2, 2, 2, 2);
+            btnMenos.Margin = new Padding(2);
             btnMenos.Name = "btnMenos";
             btnMenos.Size = new Size(60, 49);
             btnMenos.TabIndex = 4;
@@ -532,7 +534,7 @@
             pictureBox1.BackgroundImage = Properties.Resources.Gatito;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(48, 72);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(160, 73);
             pictureBox1.TabIndex = 9;
@@ -554,7 +556,7 @@
             Controls.Add(panelTCM);
             Controls.Add(panelDgv);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "frmCatalogue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCatalogue";
@@ -598,5 +600,6 @@
         private Button btnComida2;
         private Button btnComida4;
         private Button btnComida1;
+        private System.Drawing.Printing.PrintDocument ImprimirFactura;
     }
 }

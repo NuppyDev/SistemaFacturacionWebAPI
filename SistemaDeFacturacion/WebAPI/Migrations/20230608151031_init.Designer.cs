@@ -12,7 +12,7 @@ using WebAPI.Data;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(FacturationSystemContext))]
-    [Migration("20230608144255_init")]
+    [Migration("20230608151031_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -40,6 +40,18 @@ namespace WebAPI.Migrations
                     b.HasKey("CategoriesId");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoriesId = 1,
+                            CategoryName = "Bebida"
+                        },
+                        new
+                        {
+                            CategoriesId = 2,
+                            CategoryName = "Comida"
+                        });
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Description", b =>
@@ -155,7 +167,7 @@ namespace WebAPI.Migrations
                     b.Property<int>("CategoriesId")
                         .HasColumnType("int");
 
-                    b.Property<int>("DescriptionId")
+                    b.Property<int?>("DescriptionId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -172,9 +184,96 @@ namespace WebAPI.Migrations
                     b.HasIndex("CategoriesId");
 
                     b.HasIndex("DescriptionId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[DescriptionId] IS NOT NULL");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductsId = 1,
+                            CategoriesId = 1,
+                            Name = "Café Caliente",
+                            UnitPrice = 10m
+                        },
+                        new
+                        {
+                            ProductsId = 2,
+                            CategoriesId = 1,
+                            Name = "Café Helado",
+                            UnitPrice = 20m
+                        },
+                        new
+                        {
+                            ProductsId = 3,
+                            CategoriesId = 1,
+                            Name = "Frapuccino",
+                            UnitPrice = 30m
+                        },
+                        new
+                        {
+                            ProductsId = 4,
+                            CategoriesId = 1,
+                            Name = "Té de Limon",
+                            UnitPrice = 15m
+                        },
+                        new
+                        {
+                            ProductsId = 5,
+                            CategoriesId = 1,
+                            Name = "Limonada",
+                            UnitPrice = 20m
+                        },
+                        new
+                        {
+                            ProductsId = 6,
+                            CategoriesId = 1,
+                            Name = "Té Caliente",
+                            UnitPrice = 10m
+                        },
+                        new
+                        {
+                            ProductsId = 7,
+                            CategoriesId = 2,
+                            Name = "Rosquillas y Viejitas Somoteñas",
+                            UnitPrice = 20m
+                        },
+                        new
+                        {
+                            ProductsId = 8,
+                            CategoriesId = 2,
+                            Name = "Panini de Queso",
+                            UnitPrice = 25m
+                        },
+                        new
+                        {
+                            ProductsId = 9,
+                            CategoriesId = 2,
+                            Name = "Panqueques",
+                            UnitPrice = 50m
+                        },
+                        new
+                        {
+                            ProductsId = 10,
+                            CategoriesId = 2,
+                            Name = "Slice de Torta Marmoleada",
+                            UnitPrice = 20m
+                        },
+                        new
+                        {
+                            ProductsId = 11,
+                            CategoriesId = 2,
+                            Name = "Gomitas de Café",
+                            UnitPrice = 15m
+                        },
+                        new
+                        {
+                            ProductsId = 12,
+                            CategoriesId = 2,
+                            Name = "Papitas Fritas",
+                            UnitPrice = 35m
+                        });
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Tables", b =>
@@ -253,16 +352,16 @@ namespace WebAPI.Migrations
                         new
                         {
                             WaitersId = 1,
-                            Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6850),
-                            WaitersFullName = "Stephanie Tenorio"
+                            Birthday = new DateTime(2004, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateAdmission = new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4402),
+                            WaitersFullName = ""
                         },
                         new
                         {
                             WaitersId = 2,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6944),
-                            WaitersFullName = "Carolina Orozco"
+                            DateAdmission = new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4417),
+                            WaitersFullName = "Leon Scott Kennedy"
                         });
                 });
 
@@ -320,13 +419,10 @@ namespace WebAPI.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("WebAPI.Models.Clases.Description", "Description")
+                    b.HasOne("WebAPI.Models.Clases.Description", null)
                         .WithOne("Products")
                         .HasForeignKey("WebAPI.Models.Clases.Products", "DescriptionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Description");
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Tables", b =>

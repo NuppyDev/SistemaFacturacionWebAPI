@@ -80,7 +80,7 @@ namespace WebAPI.Migrations
                     CategoriesId = table.Column<int>(type: "int", nullable: false),
                     NombreDelProducto = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PrecioUnitario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    DescriptionId = table.Column<int>(type: "int", nullable: false)
+                    DescriptionId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -180,12 +180,40 @@ namespace WebAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoriesId", "CategoryName" },
+                values: new object[,]
+                {
+                    { 1, "Bebida" },
+                    { 2, "Comida" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Waiters",
                 columns: new[] { "WaitersId", "Birthday", "DateAdmission", "WaitersFullName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6850), "Stephanie Tenorio" },
-                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6944), "Carolina Orozco" }
+                    { 1, new DateTime(2004, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4402), "" },
+                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4417), "Leon Scott Kennedy" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "ProductsId", "CategoriesId", "DescriptionId", "NombreDelProducto", "PrecioUnitario" },
+                values: new object[,]
+                {
+                    { 1, 1, null, "Café Caliente", 10m },
+                    { 2, 1, null, "Café Helado", 20m },
+                    { 3, 1, null, "Frapuccino", 30m },
+                    { 4, 1, null, "Té de Limon", 15m },
+                    { 5, 1, null, "Limonada", 20m },
+                    { 6, 1, null, "Té Caliente", 10m },
+                    { 7, 2, null, "Rosquillas y Viejitas Somoteñas", 20m },
+                    { 8, 2, null, "Panini de Queso", 25m },
+                    { 9, 2, null, "Panqueques", 50m },
+                    { 10, 2, null, "Slice de Torta Marmoleada", 20m },
+                    { 11, 2, null, "Gomitas de Café", 15m },
+                    { 12, 2, null, "Papitas Fritas", 35m }
                 });
 
             migrationBuilder.InsertData(
@@ -235,7 +263,8 @@ namespace WebAPI.Migrations
                 name: "IX_Products_DescriptionId",
                 table: "Products",
                 column: "DescriptionId",
-                unique: true);
+                unique: true,
+                filter: "[DescriptionId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tables_WaitersId",

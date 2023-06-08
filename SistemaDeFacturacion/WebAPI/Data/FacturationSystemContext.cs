@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using System.Reflection.Metadata;
 using WebAPI.Models.Clases;
 
 namespace WebAPI.Data
@@ -36,8 +38,8 @@ namespace WebAPI.Data
 
             modelBuilder.Entity<Description>()
                 .HasOne(e => e.Products)
-                .WithOne(e => e.Description)
-                .HasForeignKey<Products>(e => e.DescriptionId)
+                .WithOne()
+                .HasForeignKey<Products>("DescriptionId")
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Invoice>()
@@ -59,8 +61,8 @@ namespace WebAPI.Data
                                 r => r.HasOne<Invoice>(e => e.Invoice).WithMany(e => e.InvoicesDescription));
 
             modelBuilder.Entity<Waiters>().HasData(
-                new Waiters() { WaitersId = 1, WaitersFullName = "Stephanie Tenorio", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") },
-                new Waiters() { WaitersId = 2, WaitersFullName = "Carolina Orozco", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") }
+                new Waiters() { WaitersId = 1, WaitersFullName = "", DateAdmission = DateTime.Now, Birthday = new DateTime(2004, 2, 19) },
+                new Waiters() { WaitersId = 2, WaitersFullName = "Leon Scott Kennedy", DateAdmission = DateTime.Now, Birthday = new DateTime(2005, 2, 19) }
                 );
             modelBuilder.Entity<Tables>().HasData(
                 new Tables() { TableId = 1, WaitersId = 1 },
@@ -69,6 +71,24 @@ namespace WebAPI.Data
                 new Tables() { TableId = 4, WaitersId = 2 },
                 new Tables() { TableId = 5, WaitersId = 1 },
                 new Tables() { TableId = 6, WaitersId = 2 }
+                );
+            modelBuilder.Entity<Categories>().HasData(
+                new Categories() { CategoriesId = 1, CategoryName = "Bebida" },
+                new Categories() { CategoriesId = 2, CategoryName = "Comida" }
+                );
+            modelBuilder.Entity<Products>().HasData(
+                new Products() { ProductsId = 1, Name = "Café Caliente", CategoriesId = 1, UnitPrice = 10 },
+                new Products() { ProductsId = 2, Name = "Café Helado", CategoriesId = 1, UnitPrice = 20 },
+                new Products() { ProductsId = 3, Name = "Frapuccino", CategoriesId = 1, UnitPrice = 30 },
+                new Products() { ProductsId = 4, Name = "Té de Limon", CategoriesId = 1, UnitPrice = 15 },
+                new Products() { ProductsId = 5, Name = "Limonada", CategoriesId = 1, UnitPrice = 20 },
+                new Products() { ProductsId = 6, Name = "Té Caliente", CategoriesId = 1, UnitPrice = 10 },
+                new Products() { ProductsId = 7, Name = "Rosquillas y Viejitas Somoteñas", CategoriesId = 2, UnitPrice = 20 },
+                new Products() { ProductsId = 8, Name = "Panini de Queso", CategoriesId = 2, UnitPrice = 25 },
+                new Products() { ProductsId = 9, Name = "Panqueques", CategoriesId = 2, UnitPrice = 50 },
+                new Products() { ProductsId = 10, Name = "Slice de Torta Marmoleada", CategoriesId = 2, UnitPrice = 20 },
+                new Products() { ProductsId = 11, Name = "Gomitas de Café", CategoriesId = 2, UnitPrice = 15 },
+                new Products() { ProductsId = 12, Name = "Papitas Fritas", CategoriesId = 2, UnitPrice = 35 }
                 );
         }
     }

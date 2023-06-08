@@ -15,9 +15,5 @@ namespace WebAPI.Models.Clases
         [Required]
         [Column("PrecioUnitario")]
         public decimal UnitPrice { get; set; }
-        [Required]
-        public int DescriptionId { get; set; }
-        [ForeignKey("DescriptionId")]
-        public Description Description { get; set; } = null!;
     }
 }

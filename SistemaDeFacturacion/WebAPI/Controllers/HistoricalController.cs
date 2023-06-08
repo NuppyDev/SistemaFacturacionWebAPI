@@ -14,12 +14,12 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TablesController : ControllerBase
+    public class HistoricalController : ControllerBase
     {
         private readonly FacturationSystemContext _db;
         private readonly IMapper _mapper;
 
-        public TablesController(FacturationSystemContext db, IMapper mapper)
+        public HistoricalController(FacturationSystemContext db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;

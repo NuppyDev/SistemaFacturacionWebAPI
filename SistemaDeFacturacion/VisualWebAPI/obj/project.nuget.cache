@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7a7r0e+l0EvbBu/BwstDBrfxToONo8TKt2dXRZYtwlZLfYsNYE7BfTfUicBLRUy5pIbcPgSTmbcSudwtTaucTw==",
+  "dgSpecHash": "XwX1fJup375AZrFKGLH6WppHUUHwAuhHayhZ5AiAxD28JkzVqrotUJ3nZVqSS2MS7m3gVJJmr4zTeZuLOMcRsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\GitHub Repositorios\\SistemaFacturacionWebAPI\\SistemaDeFacturacion\\VisualWebAPI\\VisualWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",

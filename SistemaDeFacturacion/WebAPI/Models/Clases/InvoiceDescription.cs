@@ -9,7 +9,11 @@ namespace WebAPI.Models.Clases
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InDeId { get; set; }
         public int InvoiceId { get; set; }
+        [ForeignKey("InvoiceId")]
+        public Invoice Invoice { get; set; } = null!;
         public int DescriptionId { get; set; }
+        [ForeignKey("DescriptionId")]
+        public Description Description { get; set; } = null!;
 
     }
 }

@@ -5,9 +5,9 @@ namespace WebAPI.Models.Clases
 {
     public class Products
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductsId { get; set; }
+        [Required]
         public int CategoriesId { get; set; }
         [Required]
         [Column("NombreDelProducto")]
@@ -15,7 +15,9 @@ namespace WebAPI.Models.Clases
         [Required]
         [Column("PrecioUnitario")]
         public decimal UnitPrice { get; set; }
+        [Required]
         public int DescriptionId { get; set; }
+        [ForeignKey("DescriptionId")]
         public Description Description { get; set; } = null!;
     }
 }

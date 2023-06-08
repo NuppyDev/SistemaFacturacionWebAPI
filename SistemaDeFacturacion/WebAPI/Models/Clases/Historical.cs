@@ -5,10 +5,11 @@ namespace WebAPI.Models.Clases
 {
     public class Historical
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int HistoricalId { get; set; }
-        public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
+        [Required]
+        public int InvoiceId { get; set; }
+        public List<Invoice> Invoices { get; } = new();
 
     }
 }

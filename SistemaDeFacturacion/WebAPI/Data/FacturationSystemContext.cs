@@ -22,10 +22,9 @@ namespace WebAPI.Data
                 .WithOne()
                 .HasForeignKey(e => e.WaitersId)
                 .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<Historical>()
-                .HasMany(e => e.Invoices)
-                .WithOne()
+                .HasMany(e=> e.Invoices)
+                .WithOne(e=> e.Historical)
                 .HasForeignKey(e => e.HistoricalId)
                 .OnDelete(DeleteBehavior.Restrict);
 
@@ -52,18 +51,12 @@ namespace WebAPI.Data
                 .WithMany(e => e.Invoices)
                 .HasForeignKey(e => e.WaitersId)
                 .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<Invoice>()
-                .HasOne<InvoiceDescription>()
-                .WithOne()
-                .HasForeignKey<InvoiceDescription>(e => e.InvoiceId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Description>()
-                .HasOne<InvoiceDescription>()
-                .WithOne()
-                .HasForeignKey<InvoiceDescription>(e => e.DescriptionId)
-                .OnDelete(DeleteBehavior.Restrict);
+                            .HasMany(e => e.Descriptions)
+                            .WithMany(e => e.Invoices)
+                            .UsingEntity<InvoiceDescription>(
+                                l => l.HasOne<Description>(e => e.Description).WithMany(e => e.InvoicesDescription),
+                                r => r.HasOne<Invoice>(e => e.Invoice).WithMany(e => e.InvoicesDescription));
 
             modelBuilder.Entity<Waiters>().HasData(
                 new Waiters() { WaitersId = 1, WaitersFullName = "Stephanie Tenorio", DateAdmission = DateTime.Now, Birthday = Convert.ToDateTime("19/02/2005") },

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class CrearBaseDatos : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -48,7 +48,8 @@ namespace WebAPI.Migrations
                 columns: table => new
                 {
                     HistoricalId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InvoiceId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -169,13 +170,13 @@ namespace WebAPI.Migrations
                         column: x => x.DescriptionId,
                         principalTable: "Description",
                         principalColumn: "DescriptionId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_InvoiceDescription_Facturas_InvoiceId",
                         column: x => x.InvoiceId,
                         principalTable: "Facturas",
                         principalColumn: "InvoiceId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -183,8 +184,8 @@ namespace WebAPI.Migrations
                 columns: new[] { "WaitersId", "Birthday", "DateAdmission", "WaitersFullName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 3, 16, 23, 44, 947, DateTimeKind.Local).AddTicks(8860), "Stephanie Tenorio" },
-                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 3, 16, 23, 44, 947, DateTimeKind.Local).AddTicks(8965), "Carolina Orozco" }
+                    { 1, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6850), "Stephanie Tenorio" },
+                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6944), "Carolina Orozco" }
                 });
 
             migrationBuilder.InsertData(
@@ -218,14 +219,12 @@ namespace WebAPI.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDescription_DescriptionId",
                 table: "InvoiceDescription",
-                column: "DescriptionId",
-                unique: true);
+                column: "DescriptionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDescription_InvoiceId",
                 table: "InvoiceDescription",
-                column: "InvoiceId",
-                unique: true);
+                column: "InvoiceId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoriesId",

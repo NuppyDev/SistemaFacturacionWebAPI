@@ -75,6 +75,9 @@ namespace WebAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HistoricalId"));
 
+                    b.Property<int>("InvoiceId")
+                        .HasColumnType("int");
+
                     b.HasKey("HistoricalId");
 
                     b.ToTable("Historical");
@@ -131,11 +134,9 @@ namespace WebAPI.Migrations
 
                     b.HasKey("InDeId");
 
-                    b.HasIndex("DescriptionId")
-                        .IsUnique();
+                    b.HasIndex("DescriptionId");
 
-                    b.HasIndex("InvoiceId")
-                        .IsUnique();
+                    b.HasIndex("InvoiceId");
 
                     b.ToTable("InvoiceDescription");
                 });
@@ -250,21 +251,21 @@ namespace WebAPI.Migrations
                         {
                             WaitersId = 1,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 3, 16, 23, 44, 947, DateTimeKind.Local).AddTicks(8860),
+                            DateAdmission = new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6850),
                             WaitersFullName = "Stephanie Tenorio"
                         },
                         new
                         {
                             WaitersId = 2,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 3, 16, 23, 44, 947, DateTimeKind.Local).AddTicks(8965),
+                            DateAdmission = new DateTime(2023, 6, 8, 8, 42, 55, 206, DateTimeKind.Local).AddTicks(6944),
                             WaitersFullName = "Carolina Orozco"
                         });
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
                 {
-                    b.HasOne("WebAPI.Models.Clases.Historical", null)
+                    b.HasOne("WebAPI.Models.Clases.Historical", "Historical")
                         .WithMany("Invoices")
                         .HasForeignKey("HistoricalId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -282,6 +283,8 @@ namespace WebAPI.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.Navigation("Historical");
+
                     b.Navigation("Tables");
 
                     b.Navigation("Waiters");
@@ -289,17 +292,21 @@ namespace WebAPI.Migrations
 
             modelBuilder.Entity("WebAPI.Models.Clases.InvoiceDescription", b =>
                 {
-                    b.HasOne("WebAPI.Models.Clases.Description", null)
-                        .WithOne()
-                        .HasForeignKey("WebAPI.Models.Clases.InvoiceDescription", "DescriptionId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                    b.HasOne("WebAPI.Models.Clases.Description", "Description")
+                        .WithMany("InvoicesDescription")
+                        .HasForeignKey("DescriptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebAPI.Models.Clases.Invoice", null)
-                        .WithOne()
-                        .HasForeignKey("WebAPI.Models.Clases.InvoiceDescription", "InvoiceId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                    b.HasOne("WebAPI.Models.Clases.Invoice", "Invoice")
+                        .WithMany("InvoicesDescription")
+                        .HasForeignKey("InvoiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Description");
+
+                    b.Navigation("Invoice");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Products", b =>
@@ -335,6 +342,8 @@ namespace WebAPI.Migrations
 
             modelBuilder.Entity("WebAPI.Models.Clases.Description", b =>
                 {
+                    b.Navigation("InvoicesDescription");
+
                     b.Navigation("Products")
                         .IsRequired();
                 });
@@ -342,6 +351,11 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Models.Clases.Historical", b =>
                 {
                     b.Navigation("Invoices");
+                });
+
+            modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
+                {
+                    b.Navigation("InvoicesDescription");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Tables", b =>

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebAPI.Models.Clases
 {
@@ -8,7 +9,9 @@ namespace WebAPI.Models.Clases
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
+        [Required]
         public int ProductsId { get; set; }
+        [ForeignKey("ProductsId")]
         public Products Products { get; set; } = null!;
         [Required]
         public int Cant { get; set; }
@@ -18,5 +21,7 @@ namespace WebAPI.Models.Clases
         public decimal SubTotal { get; set; }
         [Required]
         public decimal Total { get; set; }
+        public List<Invoice> Invoices { get; } = new();
+        public List<InvoiceDescription> InvoicesDescription { get; } = new();
     }
 }

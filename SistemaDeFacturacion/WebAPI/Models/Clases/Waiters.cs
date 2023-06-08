@@ -5,8 +5,7 @@ namespace WebAPI.Models.Clases
 {
     public class Waiters
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int WaitersId { get; set; }
         [Required]
         public string WaitersFullName { get; set; }

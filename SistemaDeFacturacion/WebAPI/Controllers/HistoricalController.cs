@@ -118,18 +118,18 @@ namespace WebAPI.Controllers
         [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialTables(int id, JsonPatchDocument<HistoricalUpdateDto> patchDto)
+        public async Task<IActionResult> UpdatePartialHistorical(int id, JsonPatchDocument<HistoricalUpdateDto> patchDto)
         {
             if (patchDto == null || id == 0)
             {
                 return BadRequest();
             }
 
-            var table = await _db.Tables.AsNoTracking().FirstOrDefaultAsync(s => s.TableId == id);
+            var historical = await _db.Historical.AsNoTracking().FirstOrDefaultAsync(s => s.HistoricalId == id);
 
-            HistoricalUpdateDto HistoricalUpdateDto = _mapper.Map<HistoricalUpdateDto>(table);
+            HistoricalUpdateDto HistoricalUpdateDto = _mapper.Map<HistoricalUpdateDto>(historical);
 
-            if (table == null) return BadRequest();
+            if (historical == null) return BadRequest();
 
             patchDto.ApplyTo(HistoricalUpdateDto, ModelState);
 

@@ -11,7 +11,7 @@ namespace WebAPI.Models.Mapping
         public MappingConfig() 
         {
             //Meseros
-            CreateMap<Waiters, WaitersDto>().ReverseMap();
+            CreateMap<Waiters, DescriptionDto>().ReverseMap();
             CreateMap<Waiters, WaitersCreateDto>().ReverseMap();
             CreateMap<Waiters, WaitersUpdateDto>().ReverseMap();
 

@@ -79,6 +79,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteTables(int id)
+
+
+
         {
             if (id == 0)
             {

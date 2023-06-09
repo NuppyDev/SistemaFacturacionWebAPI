@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPI.Data;
 
@@ -11,9 +12,11 @@ using WebAPI.Data;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(FacturationSystemContext))]
-    partial class FacturationSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20230609181050_InitDataBase")]
+    partial class InitDataBase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,12 +68,6 @@ namespace WebAPI.Migrations
                     b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductsId1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsId2")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
@@ -81,10 +78,6 @@ namespace WebAPI.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("DescriptionId");
-
-                    b.HasIndex("ProductsId");
-
-                    b.HasIndex("ProductsId1");
 
                     b.ToTable("Description");
                 });
@@ -174,6 +167,9 @@ namespace WebAPI.Migrations
                     b.Property<int>("CategoriesId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("DescriptionId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -186,6 +182,10 @@ namespace WebAPI.Migrations
                     b.HasKey("ProductsId");
 
                     b.HasIndex("CategoriesId");
+
+                    b.HasIndex("DescriptionId")
+                        .IsUnique()
+                        .HasFilter("[DescriptionId] IS NOT NULL");
 
                     b.ToTable("Products");
 
@@ -353,33 +353,16 @@ namespace WebAPI.Migrations
                         {
                             WaitersId = 1,
                             Birthday = new DateTime(2003, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 9, 12, 19, 14, 420, DateTimeKind.Local).AddTicks(3317),
+                            DateAdmission = new DateTime(2023, 6, 9, 12, 10, 50, 136, DateTimeKind.Local).AddTicks(8873),
                             WaitersFullName = "Katou Megumi"
                         },
                         new
                         {
                             WaitersId = 2,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 9, 12, 19, 14, 420, DateTimeKind.Local).AddTicks(3330),
+                            DateAdmission = new DateTime(2023, 6, 9, 12, 10, 50, 136, DateTimeKind.Local).AddTicks(8892),
                             WaitersFullName = "Leon Scott Kennedy"
                         });
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.Description", b =>
-                {
-                    b.HasOne("WebAPI.Models.Clases.Products", null)
-                        .WithMany("Descriptions")
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Models.Clases.Products", "Products")
-                        .WithMany()
-                        .HasForeignKey("ProductsId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
@@ -435,6 +418,11 @@ namespace WebAPI.Migrations
                         .HasForeignKey("CategoriesId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("WebAPI.Models.Clases.Description", null)
+                        .WithOne("Products")
+                        .HasForeignKey("WebAPI.Models.Clases.Products", "DescriptionId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Tables", b =>
@@ -454,6 +442,9 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Models.Clases.Description", b =>
                 {
                     b.Navigation("InvoicesDescription");
+
+                    b.Navigation("Products")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Historical", b =>
@@ -464,11 +455,6 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
                 {
                     b.Navigation("InvoicesDescription");
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.Products", b =>
-                {
-                    b.Navigation("Descriptions");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Tables", b =>

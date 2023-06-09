@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class InitDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -193,8 +193,8 @@ namespace WebAPI.Migrations
                 columns: new[] { "WaitersId", "Birthday", "DateAdmission", "WaitersFullName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2004, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4402), "" },
-                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 8, 9, 10, 31, 494, DateTimeKind.Local).AddTicks(4417), "Leon Scott Kennedy" }
+                    { 1, new DateTime(2003, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 9, 12, 10, 50, 136, DateTimeKind.Local).AddTicks(8873), "Katou Megumi" },
+                    { 2, new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 6, 9, 12, 10, 50, 136, DateTimeKind.Local).AddTicks(8892), "Leon Scott Kennedy" }
                 });
 
             migrationBuilder.InsertData(

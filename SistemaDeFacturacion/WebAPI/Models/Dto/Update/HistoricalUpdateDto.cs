@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebAPI.Models.Dto.Base
+namespace WebAPI.Models.Dto.Update
 {
-    public class HistoricalDto
+    public class HistoricalUpdateDto
     {
         public int HistoricalId { get; set; }
         [Required]

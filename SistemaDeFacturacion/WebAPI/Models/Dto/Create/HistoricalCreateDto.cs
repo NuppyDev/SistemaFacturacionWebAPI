@@ -2,7 +2,7 @@
 
 namespace WebAPI.Models.Dto.Base
 {
-    public class HistoricalDto
+    public class HistoricalCreateDto
     {
         public int HistoricalId { get; set; }
         [Required]

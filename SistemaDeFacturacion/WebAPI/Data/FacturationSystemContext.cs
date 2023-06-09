@@ -61,7 +61,7 @@ namespace WebAPI.Data
                                 r => r.HasOne<Invoice>(e => e.Invoice).WithMany(e => e.InvoicesDescription));
 
             modelBuilder.Entity<Waiters>().HasData(
-                new Waiters() { WaitersId = 1, WaitersFullName = "", DateAdmission = DateTime.Now, Birthday = new DateTime(2004, 2, 19) },
+                new Waiters() { WaitersId = 1, WaitersFullName = "Katou Megumi", DateAdmission = DateTime.Now, Birthday = new DateTime(2003, 9, 17) },
                 new Waiters() { WaitersId = 2, WaitersFullName = "Leon Scott Kennedy", DateAdmission = DateTime.Now, Birthday = new DateTime(2005, 2, 19) }
                 );
             modelBuilder.Entity<Tables>().HasData(

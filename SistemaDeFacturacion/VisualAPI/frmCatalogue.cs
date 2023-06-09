@@ -35,7 +35,7 @@ namespace VisualWebAPI
             Font FuenteCursiva = new Font("Arial", 12, FontStyle.Italic, GraphicsUnit.Point);
             int y = 20;
             e.Graphics.DrawImage(logo, new Rectangle(0, y += 30, 30, 30));
-            e.Graphics.DrawString("Un ticket feliz", FuenteNormal, Brushes.Black, new RectangleF(0,y+=10,120,20));
+            e.Graphics.DrawString("Un ticket feliz", FuenteNormal, Brushes.Black, new RectangleF(0, y += 10, 120, 20));
             e.Graphics.DrawImage(despedida, new Rectangle(0, y += 30, 30, 30));
 
         }

@@ -63,6 +63,26 @@ namespace VisualWebAPI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CaféCaliente {
+            get {
+                object obj = ResourceManager.GetObject("CaféCaliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaféHelado {
+            get {
+                object obj = ResourceManager.GetObject("CaféHelado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cafetera {
             get {
                 object obj = ResourceManager.GetObject("Cafetera", resourceCulture);
@@ -83,6 +103,16 @@ namespace VisualWebAPI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frapuccino {
+            get {
+                object obj = ResourceManager.GetObject("Frapuccino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gatito {
             get {
                 object obj = ResourceManager.GetObject("Gatito", resourceCulture);
@@ -96,6 +126,16 @@ namespace VisualWebAPI.Properties {
         internal static System.Drawing.Bitmap GatitoDespedida {
             get {
                 object obj = ResourceManager.GetObject("GatitoDespedida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GelatinaCafé {
+            get {
+                object obj = ResourceManager.GetObject("GelatinaCafé", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,16 @@ namespace VisualWebAPI.Properties {
         internal static System.Drawing.Bitmap Informacion {
             get {
                 object obj = ResourceManager.GetObject("Informacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limonada {
+            get {
+                object obj = ResourceManager.GetObject("Limonada", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +256,76 @@ namespace VisualWebAPI.Properties {
         internal static System.Drawing.Bitmap Number6 {
             get {
                 object obj = ResourceManager.GetObject("Number6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PanCake {
+            get {
+                object obj = ResourceManager.GetObject("PanCake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PaniniQueso {
+            get {
+                object obj = ResourceManager.GetObject("PaniniQueso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PapitaFrita {
+            get {
+                object obj = ResourceManager.GetObject("PapitaFrita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RosquillasViejitasSomoteñas {
+            get {
+                object obj = ResourceManager.GetObject("RosquillasViejitasSomoteñas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SliceTorta {
+            get {
+                object obj = ResourceManager.GetObject("SliceTorta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TéCaliente {
+            get {
+                object obj = ResourceManager.GetObject("TéCaliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TéDeLimon {
+            get {
+                object obj = ResourceManager.GetObject("TéDeLimon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

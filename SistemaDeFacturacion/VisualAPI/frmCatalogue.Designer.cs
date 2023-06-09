@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             panelTCM = new Panel();
             tcMenu = new TabControl();
             tpBebida = new TabPage();
@@ -119,14 +119,14 @@
             btnBebida3.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida3.FlatStyle = FlatStyle.Flat;
             btnBebida3.ForeColor = Color.White;
-            btnBebida3.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida3.Image = Properties.Resources.TéCaliente;
             btnBebida3.Location = new Point(427, 24);
             btnBebida3.Margin = new Padding(2);
             btnBebida3.Name = "btnBebida3";
             btnBebida3.Size = new Size(140, 114);
             btnBebida3.TabIndex = 42;
             btnBebida3.Text = "Té Caliente";
-            btnBebida3.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida3.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida3.UseVisualStyleBackColor = false;
             // 
             // btnBebida6
@@ -137,14 +137,14 @@
             btnBebida6.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida6.FlatStyle = FlatStyle.Flat;
             btnBebida6.ForeColor = Color.White;
-            btnBebida6.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida6.Image = Properties.Resources.CaféCaliente;
             btnBebida6.Location = new Point(427, 189);
             btnBebida6.Margin = new Padding(2);
             btnBebida6.Name = "btnBebida6";
             btnBebida6.Size = new Size(140, 114);
             btnBebida6.TabIndex = 41;
             btnBebida6.Text = "Café Caliente";
-            btnBebida6.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida6.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida6.UseVisualStyleBackColor = false;
             // 
             // btnBebida5
@@ -155,14 +155,14 @@
             btnBebida5.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida5.FlatStyle = FlatStyle.Flat;
             btnBebida5.ForeColor = Color.White;
-            btnBebida5.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida5.Image = Properties.Resources.CaféHelado;
             btnBebida5.Location = new Point(236, 189);
             btnBebida5.Margin = new Padding(2);
             btnBebida5.Name = "btnBebida5";
             btnBebida5.Size = new Size(140, 114);
             btnBebida5.TabIndex = 40;
             btnBebida5.Text = "Café Helado";
-            btnBebida5.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida5.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida5.UseVisualStyleBackColor = false;
             // 
             // btnBebida2
@@ -173,14 +173,14 @@
             btnBebida2.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida2.FlatStyle = FlatStyle.Flat;
             btnBebida2.ForeColor = Color.White;
-            btnBebida2.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida2.Image = Properties.Resources.TéDeLimon;
             btnBebida2.Location = new Point(236, 24);
             btnBebida2.Margin = new Padding(2);
             btnBebida2.Name = "btnBebida2";
             btnBebida2.Size = new Size(140, 114);
             btnBebida2.TabIndex = 39;
             btnBebida2.Text = "Té de Limón";
-            btnBebida2.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida2.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida2.UseVisualStyleBackColor = false;
             // 
             // btnBebida4
@@ -191,14 +191,14 @@
             btnBebida4.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida4.FlatStyle = FlatStyle.Flat;
             btnBebida4.ForeColor = Color.White;
-            btnBebida4.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida4.Image = Properties.Resources.Limonada;
             btnBebida4.Location = new Point(44, 189);
             btnBebida4.Margin = new Padding(2);
             btnBebida4.Name = "btnBebida4";
             btnBebida4.Size = new Size(140, 114);
             btnBebida4.TabIndex = 38;
             btnBebida4.Text = "Limonada";
-            btnBebida4.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida4.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida4.UseVisualStyleBackColor = false;
             // 
             // btnBebida1
@@ -209,14 +209,15 @@
             btnBebida1.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnBebida1.FlatStyle = FlatStyle.Flat;
             btnBebida1.ForeColor = Color.White;
-            btnBebida1.ImageAlign = ContentAlignment.BottomRight;
+            btnBebida1.Image = Properties.Resources.Frapuccino;
+            btnBebida1.ImageAlign = ContentAlignment.TopCenter;
             btnBebida1.Location = new Point(44, 24);
             btnBebida1.Margin = new Padding(2);
             btnBebida1.Name = "btnBebida1";
             btnBebida1.Size = new Size(140, 114);
             btnBebida1.TabIndex = 37;
             btnBebida1.Text = "Frapurrccino";
-            btnBebida1.TextAlign = ContentAlignment.BottomCenter;
+            btnBebida1.TextImageRelation = TextImageRelation.TextAboveImage;
             btnBebida1.UseVisualStyleBackColor = false;
             // 
             // tpComida
@@ -245,14 +246,14 @@
             btnComida3.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida3.FlatStyle = FlatStyle.Flat;
             btnComida3.ForeColor = Color.White;
-            btnComida3.ImageAlign = ContentAlignment.BottomRight;
+            btnComida3.Image = Properties.Resources.PapitaFrita;
             btnComida3.Location = new Point(426, 30);
             btnComida3.Margin = new Padding(2);
             btnComida3.Name = "btnComida3";
             btnComida3.Size = new Size(140, 114);
             btnComida3.TabIndex = 48;
             btnComida3.Text = "Papas Fritas";
-            btnComida3.TextAlign = ContentAlignment.BottomCenter;
+            btnComida3.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida3.UseVisualStyleBackColor = false;
             // 
             // btnComida6
@@ -264,14 +265,14 @@
             btnComida6.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida6.FlatStyle = FlatStyle.Flat;
             btnComida6.ForeColor = Color.White;
-            btnComida6.ImageAlign = ContentAlignment.BottomRight;
+            btnComida6.Image = Properties.Resources.RosquillasViejitasSomoteñas;
             btnComida6.Location = new Point(426, 192);
             btnComida6.Margin = new Padding(2);
             btnComida6.Name = "btnComida6";
             btnComida6.Size = new Size(140, 114);
             btnComida6.TabIndex = 47;
-            btnComida6.Text = "Rosquillas y viejitas Somoteñas";
-            btnComida6.TextAlign = ContentAlignment.BottomCenter;
+            btnComida6.Text = "Rosquillas y viejitas";
+            btnComida6.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida6.UseVisualStyleBackColor = false;
             // 
             // btnComida5
@@ -283,14 +284,14 @@
             btnComida5.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida5.FlatStyle = FlatStyle.Flat;
             btnComida5.ForeColor = Color.White;
-            btnComida5.ImageAlign = ContentAlignment.BottomRight;
+            btnComida5.Image = Properties.Resources.GelatinaCafé;
             btnComida5.Location = new Point(235, 192);
             btnComida5.Margin = new Padding(2);
             btnComida5.Name = "btnComida5";
             btnComida5.Size = new Size(140, 114);
             btnComida5.TabIndex = 46;
             btnComida5.Text = "Gomitas de Café";
-            btnComida5.TextAlign = ContentAlignment.BottomCenter;
+            btnComida5.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida5.UseVisualStyleBackColor = false;
             // 
             // btnComida2
@@ -302,14 +303,14 @@
             btnComida2.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida2.FlatStyle = FlatStyle.Flat;
             btnComida2.ForeColor = Color.White;
-            btnComida2.ImageAlign = ContentAlignment.BottomRight;
+            btnComida2.Image = Properties.Resources.PaniniQueso;
             btnComida2.Location = new Point(235, 30);
             btnComida2.Margin = new Padding(2);
             btnComida2.Name = "btnComida2";
             btnComida2.Size = new Size(140, 114);
             btnComida2.TabIndex = 45;
             btnComida2.Text = "Panini de queso";
-            btnComida2.TextAlign = ContentAlignment.BottomCenter;
+            btnComida2.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida2.UseVisualStyleBackColor = false;
             // 
             // btnComida4
@@ -321,14 +322,14 @@
             btnComida4.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida4.FlatStyle = FlatStyle.Flat;
             btnComida4.ForeColor = Color.White;
-            btnComida4.ImageAlign = ContentAlignment.BottomRight;
+            btnComida4.Image = Properties.Resources.SliceTorta;
             btnComida4.Location = new Point(43, 192);
             btnComida4.Margin = new Padding(2);
             btnComida4.Name = "btnComida4";
             btnComida4.Size = new Size(140, 114);
             btnComida4.TabIndex = 44;
             btnComida4.Text = "Slice de Torta Marmoleada";
-            btnComida4.TextAlign = ContentAlignment.BottomCenter;
+            btnComida4.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida4.UseVisualStyleBackColor = false;
             // 
             // btnComida1
@@ -340,14 +341,14 @@
             btnComida1.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnComida1.FlatStyle = FlatStyle.Flat;
             btnComida1.ForeColor = Color.White;
-            btnComida1.ImageAlign = ContentAlignment.BottomRight;
+            btnComida1.Image = Properties.Resources.PanCake;
             btnComida1.Location = new Point(43, 30);
             btnComida1.Margin = new Padding(2);
             btnComida1.Name = "btnComida1";
             btnComida1.Size = new Size(140, 114);
             btnComida1.TabIndex = 43;
             btnComida1.Text = "Panqueque";
-            btnComida1.TextAlign = ContentAlignment.BottomCenter;
+            btnComida1.TextImageRelation = TextImageRelation.TextAboveImage;
             btnComida1.UseVisualStyleBackColor = false;
             // 
             // panelDgv
@@ -409,24 +410,24 @@
             dgvDatos.BorderStyle = BorderStyle.None;
             dgvDatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvDatos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgvDatos.ColumnHeadersHeight = 45;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Window;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dgvDatos.DefaultCellStyle = dataGridViewCellStyle10;
             dgvDatos.EnableHeadersVisualStyles = false;
             dgvDatos.GridColor = Color.Maroon;
             dgvDatos.Location = new Point(14, 43);
@@ -434,21 +435,21 @@
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.Salmon;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.Salmon;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dgvDatos.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle4.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle12.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = Color.White;
+            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle12;
             dgvDatos.RowTemplate.Height = 33;
             dgvDatos.Size = new Size(318, 341);
             dgvDatos.TabIndex = 2;

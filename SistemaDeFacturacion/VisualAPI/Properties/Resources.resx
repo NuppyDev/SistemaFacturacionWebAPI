@@ -163,4 +163,40 @@
   <data name="GatitoDespedida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GatitoDespedida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CaféCaliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CaféCaliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaféHelado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CaféHelado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Frapuccino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frapuccino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GelatinaCafé" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GelatinaCafé.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Limonada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Limonada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanCake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanCake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaniniQueso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaniniQueso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PapitaFrita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PapitaFrita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RosquillasViejitasSomoteñas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RosquillasViejitasSomoteñas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SliceTorta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SliceTorta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TéCaliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TéCaliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TéDeLimon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TéDeLimon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

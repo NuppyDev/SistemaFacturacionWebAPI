@@ -12,7 +12,7 @@ namespace WebAPI.Models.Clases
         [Required]
         public int ProductsId { get; set; }
         [ForeignKey("ProductsId")]
-        public ProductsDto Products { get; set; } = null!;
+        public Products Products { get; set; } = null!;
         [Required]
         public int Cant { get; set; }
         [Required]

@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Models.Clases;
-using WebAPI.Models.Dto;
 using WebAPI.Models.Dto.Base;
 using WebAPI.Models.Dto.Create;
 using WebAPI.Models.Dto.Update;
@@ -14,12 +13,12 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WaitersController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly FacturationSystemContext _db;
         private readonly IMapper _mapper;
 
-        public WaitersController(FacturationSystemContext db, IMapper mapper)
+        public ProductsController(FacturationSystemContext db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
@@ -27,50 +26,50 @@ namespace WebAPI.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<WaitersDto>>> GetWaiters()
-        {   
-            var WaitersList = await _db.Waiters.ToListAsync();
-            return Ok(_mapper.Map<IEnumerable<WaitersDto>>(WaitersList));
+        public async Task<ActionResult<IEnumerable<ProductsDto>>> GetProducts()
+        {
+            var ProductsList = await _db.Products.ToListAsync();
+            return Ok(_mapper.Map<IEnumerable<ProductsDto>>(ProductsList));
         }
 
-        [HttpGet("{id:int}", Name = "GetWaiters")]
+        [HttpGet("{id:int}", Name = "GetProducts")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<WaitersCreateDto>> GetWaiters(int id)
+        public async Task<ActionResult<ProductsCreateDto>> GetProducts(int id)
         {
             if (id == 0)
                 return BadRequest();
 
-            var waiter = await _db.Waiters.FirstOrDefaultAsync(s => s.WaitersId == id);
+            var Products = await _db.Products.FirstOrDefaultAsync(s => s.ProductsId == id);
 
-            if (waiter == null)
+            if (Products == null)
                 return NotFound();
 
-            return Ok(_mapper.Map<WaitersCreateDto>(waiter));
+            return Ok(_mapper.Map<ProductsCreateDto>(Products));
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<WaitersDto>> AddWaiters([FromBody] WaitersCreateDto waitersCreateDto)
+        public async Task<ActionResult<ProductsDto>> AddProducts([FromBody] ProductsCreateDto ProductsCreateDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (waitersCreateDto == null)
+            if (ProductsCreateDto == null)
             {
-                return BadRequest(waitersCreateDto);
+                return BadRequest(ProductsCreateDto);
             }
 
-            Waiters modelo = _mapper.Map<Waiters>(waitersCreateDto);
+            Products modelo = _mapper.Map<Products>(ProductsCreateDto);
 
-            await _db.Waiters.AddAsync(modelo);
+            await _db.Products.AddAsync(modelo);
             await _db.SaveChangesAsync();
 
-            return CreatedAtRoute("GetWaiters", new { id = modelo.WaitersId }, modelo);
+            return CreatedAtRoute("GetProducts", new { id = modelo.ProductsId }, modelo);
 
         }
 
@@ -78,20 +77,20 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteWaiters(int id)
+        public async Task<IActionResult> DeleteProducts(int id)
         {
             if (id == 0)
             {
                 return BadRequest();
             }
-            var waiters = await _db.Waiters.FirstOrDefaultAsync(s => s.WaitersId == id);
+            var Products = await _db.Products.FirstOrDefaultAsync(s => s.ProductsId == id);
 
-            if (waiters == null)
+            if (Products == null)
             {
                 return NotFound();
             }
 
-            _db.Waiters.Remove(waiters);
+            _db.Products.Remove(Products);
             await _db.SaveChangesAsync(true);
 
             return NoContent();
@@ -100,16 +99,16 @@ namespace WebAPI.Controllers
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateWaiters(int id, [FromBody] WaitersUpdateDto waitersUpdateDto)
+        public async Task<IActionResult> UpdateProducts(int id, [FromBody] ProductsUpdateDto ProductsUpdateDto)
         {
-            if (waitersUpdateDto == null || id != waitersUpdateDto.WaitersId)
+            if (ProductsUpdateDto == null || id != ProductsUpdateDto.ProductsId)
             {
                 return BadRequest();
             }
 
-            Waiters modelo = _mapper.Map<Waiters>(waitersUpdateDto);
+            Products modelo = _mapper.Map<Products>(ProductsUpdateDto);
 
-            _db.Waiters.Update(modelo);
+            _db.Products.Update(modelo);
             await _db.SaveChangesAsync();
 
             return NoContent();
@@ -118,29 +117,29 @@ namespace WebAPI.Controllers
         [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialWaiters(int id, JsonPatchDocument<WaitersUpdateDto> patchDto)
+        public async Task<IActionResult> UpdatePartialProducts(int id, JsonPatchDocument<ProductsUpdateDto> patchDto)
         {
             if (patchDto == null || id == 0)
             {
                 return BadRequest();
             }
 
-            var waiters = await _db.Waiters.AsNoTracking().FirstOrDefaultAsync(s => s.WaitersId == id);
+            var Products = await _db.Products.AsNoTracking().FirstOrDefaultAsync(s => s.ProductsId == id);
 
-            WaitersUpdateDto waitersUpdateDto = _mapper.Map<WaitersUpdateDto>(waiters);
+            ProductsUpdateDto ProductsUpdateDto = _mapper.Map<ProductsUpdateDto>(Products);
 
-            if (waiters == null) return BadRequest();
+            if (Products == null) return BadRequest();
 
-            patchDto.ApplyTo(waitersUpdateDto, ModelState);
+            patchDto.ApplyTo(ProductsUpdateDto, ModelState);
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            Waiters modelo = _mapper.Map<Waiters>(waitersUpdateDto);
+            Products modelo = _mapper.Map<Products>(ProductsUpdateDto);
 
-            _db.Waiters.Update(modelo);
+            _db.Products.Update(modelo);
             await _db.SaveChangesAsync();
 
             return NoContent();

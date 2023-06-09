@@ -27,50 +27,50 @@ namespace WebAPI.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<TablesDto>>> GetTables()
+        public async Task<ActionResult<IEnumerable<HistoricalDto>>> GetHistoricals()
         {
-            var TablesList = await _db.Tables.ToListAsync();
-            return Ok(_mapper.Map<IEnumerable<TablesDto>>(TablesList));
+            var HistoricalList = await _db.Historical.ToListAsync();
+            return Ok(_mapper.Map<IEnumerable<HistoricalDto>>(HistoricalList));
         }
 
-        [HttpGet("{id:int}", Name = "GetTables")]
+        [HttpGet("{id:int}", Name = "GetHistoricals")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<TablesCreateDto>> GetTables(int id)
+        public async Task<ActionResult<HistoricalCreateDto>> GetHistorical(int id)
         {
             if (id == 0)
                 return BadRequest();
 
-            var tables = await _db.Tables.FirstOrDefaultAsync(s => s.TableId == id);
+            var Historical = await _db.Historical.FirstOrDefaultAsync(s => s.HistoricalId == id);
 
-            if (tables == null)
+            if (Historical == null)
                 return NotFound();
 
-            return Ok(_mapper.Map<TablesDto>(tables));
+            return Ok(_mapper.Map<HistoricalDto>(Historical));
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<TablesDto>> AddTables([FromBody] TablesCreateDto tablesCreateDto)
+        public async Task<ActionResult<HistoricalDto>> AddHistoricals([FromBody] HistoricalCreateDto HistoricalCreateDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (tablesCreateDto == null)
+            if (HistoricalCreateDto == null)
             {
-                return BadRequest(tablesCreateDto);
+                return BadRequest(HistoricalCreateDto);
             }
 
-            Tables modelo = _mapper.Map<Tables>(tablesCreateDto);
+            Historical modelo = _mapper.Map<Historical>(HistoricalCreateDto);
 
-            await _db.Tables.AddAsync(modelo);
+            await _db.Historical.AddAsync(modelo);
             await _db.SaveChangesAsync();
 
-            return CreatedAtRoute("GetTables", new { id = modelo.TableId }, modelo);
+            return CreatedAtRoute("GetHistorical", new { id = modelo.HistoricalId }, modelo);
 
         }
 
@@ -78,23 +78,20 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteTables(int id)
-
-
-
+        public async Task<IActionResult> DeleteHistoricals(int id)
         {
             if (id == 0)
             {
                 return BadRequest();
             }
-            var table = await _db.Tables.FirstOrDefaultAsync(s => s.TableId == id);
+            var Historical = await _db.Historical.FirstOrDefaultAsync(s => s.HistoricalId == id);
 
-            if (table == null)
+            if (Historical == null)
             {
                 return NotFound();
             }
 
-            _db.Tables.Remove(table);
+            _db.Historical.Remove(Historical);
             await _db.SaveChangesAsync(true);
 
             return NoContent();
@@ -103,16 +100,16 @@ namespace WebAPI.Controllers
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateTables(int id, [FromBody] TablesUpdateDto tablesUpdateDto)
+        public async Task<IActionResult> UpdateHistorical(int id, [FromBody] HistoricalUpdateDto HistoricalUpdateDto)
         {
-            if (tablesUpdateDto == null || id != tablesUpdateDto.TableId)
+            if (HistoricalUpdateDto == null || id != HistoricalUpdateDto.HistoricalId)
             {
                 return BadRequest();
             }
 
-            Tables modelo = _mapper.Map<Tables>(tablesUpdateDto);
+            Historical modelo = _mapper.Map<Historical>(HistoricalUpdateDto);
 
-            _db.Tables.Update(modelo);
+            _db.Historical.Update(modelo);
             await _db.SaveChangesAsync();
 
             return NoContent();
@@ -121,7 +118,7 @@ namespace WebAPI.Controllers
         [HttpPatch("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialTables(int id, JsonPatchDocument<TablesUpdateDto> patchDto)
+        public async Task<IActionResult> UpdatePartialTables(int id, JsonPatchDocument<HistoricalUpdateDto> patchDto)
         {
             if (patchDto == null || id == 0)
             {
@@ -130,20 +127,20 @@ namespace WebAPI.Controllers
 
             var table = await _db.Tables.AsNoTracking().FirstOrDefaultAsync(s => s.TableId == id);
 
-            TablesUpdateDto tablesUpdateDto = _mapper.Map<TablesUpdateDto>(table);
+            HistoricalUpdateDto HistoricalUpdateDto = _mapper.Map<HistoricalUpdateDto>(table);
 
             if (table == null) return BadRequest();
 
-            patchDto.ApplyTo(tablesUpdateDto, ModelState);
+            patchDto.ApplyTo(HistoricalUpdateDto, ModelState);
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            Tables modelo = _mapper.Map<Tables>(tablesUpdateDto);
+            Historical modelo = _mapper.Map<Historical>(HistoricalUpdateDto);
 
-            _db.Tables.Update(modelo);
+            _db.Historical.Update(modelo);
             await _db.SaveChangesAsync();
 
             return NoContent();

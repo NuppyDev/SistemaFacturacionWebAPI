@@ -82,29 +82,29 @@
             // 
             // btnInitiationMenu
             // 
-            btnInitiationMenu.BackColor = Color.White;
+            btnInitiationMenu.BackColor = Color.Transparent;
             btnInitiationMenu.BackgroundImage = Properties.Resources.Gatito;
             btnInitiationMenu.BackgroundImageLayout = ImageLayout.Zoom;
             btnInitiationMenu.FlatAppearance.BorderSize = 0;
-            btnInitiationMenu.FlatAppearance.MouseOverBackColor = Color.White;
+            btnInitiationMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(244, 214, 180);
             btnInitiationMenu.FlatStyle = FlatStyle.Flat;
-            btnInitiationMenu.Location = new Point(42, 64);
+            btnInitiationMenu.Location = new Point(5, 6);
             btnInitiationMenu.Margin = new Padding(2);
             btnInitiationMenu.Name = "btnInitiationMenu";
-            btnInitiationMenu.Size = new Size(91, 78);
+            btnInitiationMenu.Size = new Size(129, 126);
             btnInitiationMenu.TabIndex = 0;
             btnInitiationMenu.UseVisualStyleBackColor = false;
             btnInitiationMenu.Click += btnInitiationMenu_Click;
             // 
             // btnHistoryMenu
             // 
-            btnHistoryMenu.BackColor = Color.White;
+            btnHistoryMenu.BackColor = Color.Transparent;
             btnHistoryMenu.BackgroundImage = Properties.Resources.Factura;
             btnHistoryMenu.BackgroundImageLayout = ImageLayout.Center;
             btnHistoryMenu.FlatAppearance.BorderSize = 0;
-            btnHistoryMenu.FlatAppearance.MouseOverBackColor = Color.White;
+            btnHistoryMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(244, 214, 180);
             btnHistoryMenu.FlatStyle = FlatStyle.Flat;
-            btnHistoryMenu.Location = new Point(42, 286);
+            btnHistoryMenu.Location = new Point(43, 210);
             btnHistoryMenu.Margin = new Padding(2);
             btnHistoryMenu.Name = "btnHistoryMenu";
             btnHistoryMenu.Size = new Size(91, 78);
@@ -114,13 +114,13 @@
             // 
             // btnInformationMenu
             // 
-            btnInformationMenu.BackColor = Color.White;
+            btnInformationMenu.BackColor = Color.Transparent;
             btnInformationMenu.BackgroundImage = Properties.Resources.Informacion;
             btnInformationMenu.BackgroundImageLayout = ImageLayout.Center;
             btnInformationMenu.FlatAppearance.BorderSize = 0;
-            btnInformationMenu.FlatAppearance.MouseOverBackColor = Color.White;
+            btnInformationMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(244, 214, 180);
             btnInformationMenu.FlatStyle = FlatStyle.Flat;
-            btnInformationMenu.Location = new Point(42, 390);
+            btnInformationMenu.Location = new Point(43, 362);
             btnInformationMenu.Margin = new Padding(2);
             btnInformationMenu.Name = "btnInformationMenu";
             btnInformationMenu.Size = new Size(91, 78);

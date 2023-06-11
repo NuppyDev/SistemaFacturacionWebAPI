@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelTCM = new Panel();
             tcMenu = new TabControl();
             tpBebida = new TabPage();
@@ -60,6 +60,7 @@
             lblPrecio = new Label();
             pictureBox1 = new PictureBox();
             ImprimirFactura = new System.Drawing.Printing.PrintDocument();
+            btnAgregar = new Button();
             panelTCM.SuspendLayout();
             tcMenu.SuspendLayout();
             tpBebida.SuspendLayout();
@@ -410,24 +411,24 @@
             dgvDatos.BorderStyle = BorderStyle.None;
             dgvDatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvDatos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle9.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvDatos.ColumnHeadersHeight = 45;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Window;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            dgvDatos.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvDatos.EnableHeadersVisualStyles = false;
             dgvDatos.GridColor = Color.Maroon;
             dgvDatos.Location = new Point(14, 43);
@@ -435,21 +436,21 @@
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.Salmon;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.Salmon;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvDatos.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle12.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = Color.White;
-            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvDatos.RowTemplate.Height = 33;
             dgvDatos.Size = new Size(318, 341);
             dgvDatos.TabIndex = 2;
@@ -541,12 +542,31 @@
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
+            // btnAgregar
+            // 
+            btnAgregar.BackColor = Color.FromArgb(255, 147, 118);
+            btnAgregar.BackgroundImageLayout = ImageLayout.Center;
+            btnAgregar.Cursor = Cursors.Hand;
+            btnAgregar.FlatAppearance.BorderSize = 0;
+            btnAgregar.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Location = new Point(463, 114);
+            btnAgregar.Margin = new Padding(2);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(132, 42);
+            btnAgregar.TabIndex = 10;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            // 
             // frmCatalogue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 214, 180);
             ClientSize = new Size(970, 591);
+            Controls.Add(btnAgregar);
             Controls.Add(pictureBox1);
             Controls.Add(lblPrecio);
             Controls.Add(lblCantComprar);
@@ -602,5 +622,6 @@
         private Button btnComida4;
         private Button btnComida1;
         private System.Drawing.Printing.PrintDocument ImprimirFactura;
+        private Button btnAgregar;
     }
 }

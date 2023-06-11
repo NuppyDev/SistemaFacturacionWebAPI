@@ -10,6 +10,8 @@ namespace WebAPI.Models.Clases
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
         [Required]
+        public int InvoiceId { get; set; }
+        [Required]
         public int ProductsId { get; set; }
         [ForeignKey("ProductsId")]
         public Products Products { get; set; } = null!;

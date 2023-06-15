@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{81E66BFD-CA91-4ABD-9DFE-4A21182E0FD5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{CDA63432-3405-469E-A131-052F8CAB054E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controler", "Controller\Controler.csproj", "{CDA63432-3405-469E-A131-052F8CAB054E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualWebAPI", "VisualAPI\VisualWebAPI.csproj", "{312199CA-A5D1-42C8-B24E-BB7A593E4CE1}"
 EndProject

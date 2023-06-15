@@ -63,7 +63,8 @@ namespace WebAPI.Data
 
             modelBuilder.Entity<Waiters>().HasData(
                 new Waiters() { WaitersId = 1, WaitersFullName = "Katou Megumi", DateAdmission = DateTime.Now, Birthday = new DateTime(2003, 9, 17) },
-                new Waiters() { WaitersId = 2, WaitersFullName = "Leon Scott Kennedy", DateAdmission = DateTime.Now, Birthday = new DateTime(2005, 2, 19) }
+                new Waiters() { WaitersId = 2, WaitersFullName = "Leon Scott Kennedy", DateAdmission = DateTime.Now, Birthday = new DateTime(2005, 2, 19) },
+                new Waiters() { WaitersId = 3, WaitersFullName = "Para Llevar", DateAdmission = DateTime.Now, Birthday = DateTime.Now }
                 );
             modelBuilder.Entity<Tables>().HasData(
                 new Tables() { TableId = 1, WaitersId = 1 },
@@ -71,7 +72,8 @@ namespace WebAPI.Data
                 new Tables() { TableId = 3, WaitersId = 1 },
                 new Tables() { TableId = 4, WaitersId = 2 },
                 new Tables() { TableId = 5, WaitersId = 1 },
-                new Tables() { TableId = 6, WaitersId = 2 }
+                new Tables() { TableId = 6, WaitersId = 2 },
+                new Tables() { TableId = 7, WaitersId = 3 }
                 );
             modelBuilder.Entity<Categories>().HasData(
                 new Categories() { CategoriesId = 1, CategoryName = "Bebida" },

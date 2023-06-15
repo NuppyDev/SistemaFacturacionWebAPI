@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<IEnumerable<WaitersDto>>> GetWaiters()
         {   
             var WaitersList = await _db.Waiters.ToListAsync();
-            return Ok(_mapper.Map<IEnumerable<DescriptionDto>>(WaitersList));
+            return Ok(_mapper.Map<IEnumerable<WaitersDto>>(WaitersList));
         }
 
         [HttpGet("{id:int}", Name = "GetWaiters")]

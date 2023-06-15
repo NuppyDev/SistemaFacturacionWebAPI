@@ -2,16 +2,16 @@
 using System.Text;
 using WebAPI.Models.Dto.Base;
 
-namespace Controller.Controladores
+namespace Controler.Controladores
 {
     public class ControlMesas
     {
-        List<string> MesasYMeseros = new List<string>();
         int t;
         string m;
 
         public async Task<List<string>> ObtenerMesasYMeserosAsync(int id)
         {
+            List<string> MesasYMeseros = new List<string>();
             int numeroMesa = await ObtenerMesas(id);
             string numeroMesas = Convert.ToString(numeroMesa);
             string nombreMesero = await ObtenerMeseros(numeroMesa);

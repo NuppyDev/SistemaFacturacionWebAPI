@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using WebAPI.Models.Dto.Base;
 
-namespace Controller.Controladores
+namespace Controler.Controladores
 {
     public class ControlCatalogo
     {
         string codigo, nombre, precio;
-        public List<String> productos = new List<String>();
         public async Task<List<string>> Productos(int id)
         {
+            List<String> productos = new List<String>();
             ProductsDto producto = await ObtenerProducto(id);
             codigo = Convert.ToString(producto.ProductsId);
             nombre = producto.Name;

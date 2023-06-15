@@ -326,6 +326,11 @@ namespace WebAPI.Migrations
                         {
                             TableId = 6,
                             WaitersId = 2
+                        },
+                        new
+                        {
+                            TableId = 7,
+                            WaitersId = 3
                         });
                 });
 
@@ -356,15 +361,22 @@ namespace WebAPI.Migrations
                         {
                             WaitersId = 1,
                             Birthday = new DateTime(2003, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 11, 13, 2, 39, 360, DateTimeKind.Local).AddTicks(8028),
+                            DateAdmission = new DateTime(2023, 6, 14, 18, 48, 26, 265, DateTimeKind.Local).AddTicks(6949),
                             WaitersFullName = "Katou Megumi"
                         },
                         new
                         {
                             WaitersId = 2,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 11, 13, 2, 39, 360, DateTimeKind.Local).AddTicks(8042),
+                            DateAdmission = new DateTime(2023, 6, 14, 18, 48, 26, 265, DateTimeKind.Local).AddTicks(6961),
                             WaitersFullName = "Leon Scott Kennedy"
+                        },
+                        new
+                        {
+                            WaitersId = 3,
+                            Birthday = new DateTime(2023, 6, 14, 18, 48, 26, 265, DateTimeKind.Local).AddTicks(6963),
+                            DateAdmission = new DateTime(2023, 6, 14, 18, 48, 26, 265, DateTimeKind.Local).AddTicks(6963),
+                            WaitersFullName = "Para Llevar"
                         });
                 });
 

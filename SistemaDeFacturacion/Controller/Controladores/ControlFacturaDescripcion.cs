@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebAPI.Models.Dto.Create;
 
-namespace Controller.Controladores
+namespace Controler.Controladores
 {
     public class ControlFacturaDescripcion
     {

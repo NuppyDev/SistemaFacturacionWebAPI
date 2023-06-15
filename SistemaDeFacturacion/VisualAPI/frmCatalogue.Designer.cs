@@ -28,39 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             panelTCM = new Panel();
             tcMenu = new TabControl();
             tpBebida = new TabPage();
-            btnBebida3 = new Button();
-            btnBebida6 = new Button();
-            btnBebida5 = new Button();
-            btnBebida2 = new Button();
-            btnBebida4 = new Button();
-            btnBebida1 = new Button();
+            btnTeCaliente = new Button();
+            btnCafeCaliente = new Button();
+            btnCafeHelado = new Button();
+            btnTeLimon = new Button();
+            btnLimonada = new Button();
+            btnFrapurrccino = new Button();
             tpComida = new TabPage();
-            btnComida3 = new Button();
-            btnComida6 = new Button();
-            btnComida5 = new Button();
-            btnComida2 = new Button();
-            btnComida4 = new Button();
-            btnComida1 = new Button();
+            btnPapas = new Button();
+            btnRosquillas = new Button();
+            btnGomitas = new Button();
+            btnPanini = new Button();
+            btnTorta = new Button();
+            btnPanqueque = new Button();
             panelDgv = new Panel();
             btnImprimir = new Button();
             btnCancelar = new Button();
             dgvDatos = new DataGridView();
             btnMas = new Button();
             btnMenos = new Button();
-            label1 = new Label();
+            lblNombre = new Label();
             label2 = new Label();
             lblCantComprar = new Label();
             lblPrecio = new Label();
             pictureBox1 = new PictureBox();
             ImprimirFactura = new System.Drawing.Printing.PrintDocument();
             btnAgregar = new Button();
+            lblCantidad = new Label();
+            label1 = new Label();
+            lblCodigo = new Label();
             panelTCM.SuspendLayout();
             tcMenu.SuspendLayout();
             tpBebida.SuspendLayout();
@@ -96,12 +99,12 @@
             // tpBebida
             // 
             tpBebida.BackColor = Color.FromArgb(198, 139, 125);
-            tpBebida.Controls.Add(btnBebida3);
-            tpBebida.Controls.Add(btnBebida6);
-            tpBebida.Controls.Add(btnBebida5);
-            tpBebida.Controls.Add(btnBebida2);
-            tpBebida.Controls.Add(btnBebida4);
-            tpBebida.Controls.Add(btnBebida1);
+            tpBebida.Controls.Add(btnTeCaliente);
+            tpBebida.Controls.Add(btnCafeCaliente);
+            tpBebida.Controls.Add(btnCafeHelado);
+            tpBebida.Controls.Add(btnTeLimon);
+            tpBebida.Controls.Add(btnLimonada);
+            tpBebida.Controls.Add(btnFrapurrccino);
             tpBebida.Cursor = Cursors.Hand;
             tpBebida.ForeColor = Color.White;
             tpBebida.Location = new Point(4, 25);
@@ -112,124 +115,130 @@
             tpBebida.TabIndex = 0;
             tpBebida.Text = "BEBIDA";
             // 
-            // btnBebida3
+            // btnTeCaliente
             // 
-            btnBebida3.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida3.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida3.FlatAppearance.BorderSize = 0;
-            btnBebida3.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida3.FlatStyle = FlatStyle.Flat;
-            btnBebida3.ForeColor = Color.White;
-            btnBebida3.Image = Properties.Resources.TéCaliente;
-            btnBebida3.Location = new Point(427, 24);
-            btnBebida3.Margin = new Padding(2);
-            btnBebida3.Name = "btnBebida3";
-            btnBebida3.Size = new Size(140, 114);
-            btnBebida3.TabIndex = 42;
-            btnBebida3.Text = "Té Caliente";
-            btnBebida3.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida3.UseVisualStyleBackColor = false;
+            btnTeCaliente.BackColor = Color.FromArgb(232, 174, 137);
+            btnTeCaliente.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTeCaliente.FlatAppearance.BorderSize = 0;
+            btnTeCaliente.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnTeCaliente.FlatStyle = FlatStyle.Flat;
+            btnTeCaliente.ForeColor = Color.White;
+            btnTeCaliente.Image = Properties.Resources.TéCaliente;
+            btnTeCaliente.Location = new Point(427, 24);
+            btnTeCaliente.Margin = new Padding(2);
+            btnTeCaliente.Name = "btnTeCaliente";
+            btnTeCaliente.Size = new Size(140, 114);
+            btnTeCaliente.TabIndex = 42;
+            btnTeCaliente.Text = "Té Caliente";
+            btnTeCaliente.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnTeCaliente.UseVisualStyleBackColor = false;
+            btnTeCaliente.Click += btnTeCaliente_Click;
             // 
-            // btnBebida6
+            // btnCafeCaliente
             // 
-            btnBebida6.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida6.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida6.FlatAppearance.BorderSize = 0;
-            btnBebida6.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida6.FlatStyle = FlatStyle.Flat;
-            btnBebida6.ForeColor = Color.White;
-            btnBebida6.Image = Properties.Resources.CaféCaliente;
-            btnBebida6.Location = new Point(427, 189);
-            btnBebida6.Margin = new Padding(2);
-            btnBebida6.Name = "btnBebida6";
-            btnBebida6.Size = new Size(140, 114);
-            btnBebida6.TabIndex = 41;
-            btnBebida6.Text = "Café Caliente";
-            btnBebida6.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida6.UseVisualStyleBackColor = false;
+            btnCafeCaliente.BackColor = Color.FromArgb(232, 174, 137);
+            btnCafeCaliente.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCafeCaliente.FlatAppearance.BorderSize = 0;
+            btnCafeCaliente.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnCafeCaliente.FlatStyle = FlatStyle.Flat;
+            btnCafeCaliente.ForeColor = Color.White;
+            btnCafeCaliente.Image = Properties.Resources.CaféCaliente;
+            btnCafeCaliente.Location = new Point(427, 189);
+            btnCafeCaliente.Margin = new Padding(2);
+            btnCafeCaliente.Name = "btnCafeCaliente";
+            btnCafeCaliente.Size = new Size(140, 114);
+            btnCafeCaliente.TabIndex = 41;
+            btnCafeCaliente.Text = "Café Caliente";
+            btnCafeCaliente.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnCafeCaliente.UseVisualStyleBackColor = false;
+            btnCafeCaliente.Click += btnCafeCaliente_Click;
             // 
-            // btnBebida5
+            // btnCafeHelado
             // 
-            btnBebida5.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida5.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida5.FlatAppearance.BorderSize = 0;
-            btnBebida5.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida5.FlatStyle = FlatStyle.Flat;
-            btnBebida5.ForeColor = Color.White;
-            btnBebida5.Image = Properties.Resources.CaféHelado;
-            btnBebida5.Location = new Point(236, 189);
-            btnBebida5.Margin = new Padding(2);
-            btnBebida5.Name = "btnBebida5";
-            btnBebida5.Size = new Size(140, 114);
-            btnBebida5.TabIndex = 40;
-            btnBebida5.Text = "Café Helado";
-            btnBebida5.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida5.UseVisualStyleBackColor = false;
+            btnCafeHelado.BackColor = Color.FromArgb(232, 174, 137);
+            btnCafeHelado.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCafeHelado.FlatAppearance.BorderSize = 0;
+            btnCafeHelado.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnCafeHelado.FlatStyle = FlatStyle.Flat;
+            btnCafeHelado.ForeColor = Color.White;
+            btnCafeHelado.Image = Properties.Resources.CaféHelado;
+            btnCafeHelado.Location = new Point(236, 189);
+            btnCafeHelado.Margin = new Padding(2);
+            btnCafeHelado.Name = "btnCafeHelado";
+            btnCafeHelado.Size = new Size(140, 114);
+            btnCafeHelado.TabIndex = 40;
+            btnCafeHelado.Text = "Café Helado";
+            btnCafeHelado.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnCafeHelado.UseVisualStyleBackColor = false;
+            btnCafeHelado.Click += btnCafeHelado_Click;
             // 
-            // btnBebida2
+            // btnTeLimon
             // 
-            btnBebida2.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida2.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida2.FlatAppearance.BorderSize = 0;
-            btnBebida2.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida2.FlatStyle = FlatStyle.Flat;
-            btnBebida2.ForeColor = Color.White;
-            btnBebida2.Image = Properties.Resources.TéDeLimon;
-            btnBebida2.Location = new Point(236, 24);
-            btnBebida2.Margin = new Padding(2);
-            btnBebida2.Name = "btnBebida2";
-            btnBebida2.Size = new Size(140, 114);
-            btnBebida2.TabIndex = 39;
-            btnBebida2.Text = "Té de Limón";
-            btnBebida2.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida2.UseVisualStyleBackColor = false;
+            btnTeLimon.BackColor = Color.FromArgb(232, 174, 137);
+            btnTeLimon.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTeLimon.FlatAppearance.BorderSize = 0;
+            btnTeLimon.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnTeLimon.FlatStyle = FlatStyle.Flat;
+            btnTeLimon.ForeColor = Color.White;
+            btnTeLimon.Image = Properties.Resources.TéDeLimon;
+            btnTeLimon.Location = new Point(236, 24);
+            btnTeLimon.Margin = new Padding(2);
+            btnTeLimon.Name = "btnTeLimon";
+            btnTeLimon.Size = new Size(140, 114);
+            btnTeLimon.TabIndex = 39;
+            btnTeLimon.Text = "Té de Limón";
+            btnTeLimon.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnTeLimon.UseVisualStyleBackColor = false;
+            btnTeLimon.Click += btnTeLimon_Click;
             // 
-            // btnBebida4
+            // btnLimonada
             // 
-            btnBebida4.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida4.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida4.FlatAppearance.BorderSize = 0;
-            btnBebida4.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida4.FlatStyle = FlatStyle.Flat;
-            btnBebida4.ForeColor = Color.White;
-            btnBebida4.Image = Properties.Resources.Limonada;
-            btnBebida4.Location = new Point(44, 189);
-            btnBebida4.Margin = new Padding(2);
-            btnBebida4.Name = "btnBebida4";
-            btnBebida4.Size = new Size(140, 114);
-            btnBebida4.TabIndex = 38;
-            btnBebida4.Text = "Limonada";
-            btnBebida4.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida4.UseVisualStyleBackColor = false;
+            btnLimonada.BackColor = Color.FromArgb(232, 174, 137);
+            btnLimonada.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLimonada.FlatAppearance.BorderSize = 0;
+            btnLimonada.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnLimonada.FlatStyle = FlatStyle.Flat;
+            btnLimonada.ForeColor = Color.White;
+            btnLimonada.Image = Properties.Resources.Limonada;
+            btnLimonada.Location = new Point(44, 189);
+            btnLimonada.Margin = new Padding(2);
+            btnLimonada.Name = "btnLimonada";
+            btnLimonada.Size = new Size(140, 114);
+            btnLimonada.TabIndex = 38;
+            btnLimonada.Text = "Limonada";
+            btnLimonada.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnLimonada.UseVisualStyleBackColor = false;
+            btnLimonada.Click += btnLimonada_Click;
             // 
-            // btnBebida1
+            // btnFrapurrccino
             // 
-            btnBebida1.BackColor = Color.FromArgb(232, 174, 137);
-            btnBebida1.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBebida1.FlatAppearance.BorderSize = 0;
-            btnBebida1.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnBebida1.FlatStyle = FlatStyle.Flat;
-            btnBebida1.ForeColor = Color.White;
-            btnBebida1.Image = Properties.Resources.Frapuccino;
-            btnBebida1.ImageAlign = ContentAlignment.TopCenter;
-            btnBebida1.Location = new Point(44, 24);
-            btnBebida1.Margin = new Padding(2);
-            btnBebida1.Name = "btnBebida1";
-            btnBebida1.Size = new Size(140, 114);
-            btnBebida1.TabIndex = 37;
-            btnBebida1.Text = "Frapurrccino";
-            btnBebida1.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnBebida1.UseVisualStyleBackColor = false;
+            btnFrapurrccino.BackColor = Color.FromArgb(232, 174, 137);
+            btnFrapurrccino.BackgroundImageLayout = ImageLayout.Stretch;
+            btnFrapurrccino.FlatAppearance.BorderSize = 0;
+            btnFrapurrccino.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnFrapurrccino.FlatStyle = FlatStyle.Flat;
+            btnFrapurrccino.ForeColor = Color.White;
+            btnFrapurrccino.Image = Properties.Resources.Frapuccino;
+            btnFrapurrccino.ImageAlign = ContentAlignment.TopCenter;
+            btnFrapurrccino.Location = new Point(44, 24);
+            btnFrapurrccino.Margin = new Padding(2);
+            btnFrapurrccino.Name = "btnFrapurrccino";
+            btnFrapurrccino.Size = new Size(140, 114);
+            btnFrapurrccino.TabIndex = 37;
+            btnFrapurrccino.Text = "Frapurrccino";
+            btnFrapurrccino.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnFrapurrccino.UseVisualStyleBackColor = false;
+            btnFrapurrccino.Click += btnFrapurrccino_Click;
             // 
             // tpComida
             // 
             tpComida.BackColor = Color.FromArgb(198, 139, 125);
-            tpComida.Controls.Add(btnComida3);
-            tpComida.Controls.Add(btnComida6);
-            tpComida.Controls.Add(btnComida5);
-            tpComida.Controls.Add(btnComida2);
-            tpComida.Controls.Add(btnComida4);
-            tpComida.Controls.Add(btnComida1);
+            tpComida.Controls.Add(btnPapas);
+            tpComida.Controls.Add(btnRosquillas);
+            tpComida.Controls.Add(btnGomitas);
+            tpComida.Controls.Add(btnPanini);
+            tpComida.Controls.Add(btnTorta);
+            tpComida.Controls.Add(btnPanqueque);
             tpComida.Location = new Point(4, 25);
             tpComida.Margin = new Padding(2);
             tpComida.Name = "tpComida";
@@ -238,119 +247,125 @@
             tpComida.TabIndex = 1;
             tpComida.Text = "COMIDA";
             // 
-            // btnComida3
+            // btnPapas
             // 
-            btnComida3.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida3.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida3.Cursor = Cursors.Hand;
-            btnComida3.FlatAppearance.BorderSize = 0;
-            btnComida3.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida3.FlatStyle = FlatStyle.Flat;
-            btnComida3.ForeColor = Color.White;
-            btnComida3.Image = Properties.Resources.PapitaFrita;
-            btnComida3.Location = new Point(426, 30);
-            btnComida3.Margin = new Padding(2);
-            btnComida3.Name = "btnComida3";
-            btnComida3.Size = new Size(140, 114);
-            btnComida3.TabIndex = 48;
-            btnComida3.Text = "Papas Fritas";
-            btnComida3.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida3.UseVisualStyleBackColor = false;
+            btnPapas.BackColor = Color.FromArgb(232, 174, 137);
+            btnPapas.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPapas.Cursor = Cursors.Hand;
+            btnPapas.FlatAppearance.BorderSize = 0;
+            btnPapas.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnPapas.FlatStyle = FlatStyle.Flat;
+            btnPapas.ForeColor = Color.White;
+            btnPapas.Image = Properties.Resources.PapitaFrita;
+            btnPapas.Location = new Point(426, 30);
+            btnPapas.Margin = new Padding(2);
+            btnPapas.Name = "btnPapas";
+            btnPapas.Size = new Size(140, 114);
+            btnPapas.TabIndex = 48;
+            btnPapas.Text = "Papas Fritas";
+            btnPapas.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnPapas.UseVisualStyleBackColor = false;
+            btnPapas.Click += btnPapas_Click;
             // 
-            // btnComida6
+            // btnRosquillas
             // 
-            btnComida6.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida6.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida6.Cursor = Cursors.Hand;
-            btnComida6.FlatAppearance.BorderSize = 0;
-            btnComida6.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida6.FlatStyle = FlatStyle.Flat;
-            btnComida6.ForeColor = Color.White;
-            btnComida6.Image = Properties.Resources.RosquillasViejitasSomoteñas;
-            btnComida6.Location = new Point(426, 192);
-            btnComida6.Margin = new Padding(2);
-            btnComida6.Name = "btnComida6";
-            btnComida6.Size = new Size(140, 114);
-            btnComida6.TabIndex = 47;
-            btnComida6.Text = "Rosquillas y viejitas";
-            btnComida6.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida6.UseVisualStyleBackColor = false;
+            btnRosquillas.BackColor = Color.FromArgb(232, 174, 137);
+            btnRosquillas.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRosquillas.Cursor = Cursors.Hand;
+            btnRosquillas.FlatAppearance.BorderSize = 0;
+            btnRosquillas.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnRosquillas.FlatStyle = FlatStyle.Flat;
+            btnRosquillas.ForeColor = Color.White;
+            btnRosquillas.Image = Properties.Resources.RosquillasViejitasSomoteñas;
+            btnRosquillas.Location = new Point(426, 192);
+            btnRosquillas.Margin = new Padding(2);
+            btnRosquillas.Name = "btnRosquillas";
+            btnRosquillas.Size = new Size(140, 114);
+            btnRosquillas.TabIndex = 47;
+            btnRosquillas.Text = "Rosquillas y viejitas";
+            btnRosquillas.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnRosquillas.UseVisualStyleBackColor = false;
+            btnRosquillas.Click += btnRosquillas_Click;
             // 
-            // btnComida5
+            // btnGomitas
             // 
-            btnComida5.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida5.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida5.Cursor = Cursors.Hand;
-            btnComida5.FlatAppearance.BorderSize = 0;
-            btnComida5.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida5.FlatStyle = FlatStyle.Flat;
-            btnComida5.ForeColor = Color.White;
-            btnComida5.Image = Properties.Resources.GelatinaCafé;
-            btnComida5.Location = new Point(235, 192);
-            btnComida5.Margin = new Padding(2);
-            btnComida5.Name = "btnComida5";
-            btnComida5.Size = new Size(140, 114);
-            btnComida5.TabIndex = 46;
-            btnComida5.Text = "Gomitas de Café";
-            btnComida5.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida5.UseVisualStyleBackColor = false;
+            btnGomitas.BackColor = Color.FromArgb(232, 174, 137);
+            btnGomitas.BackgroundImageLayout = ImageLayout.Stretch;
+            btnGomitas.Cursor = Cursors.Hand;
+            btnGomitas.FlatAppearance.BorderSize = 0;
+            btnGomitas.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnGomitas.FlatStyle = FlatStyle.Flat;
+            btnGomitas.ForeColor = Color.White;
+            btnGomitas.Image = Properties.Resources.GelatinaCafé;
+            btnGomitas.Location = new Point(235, 192);
+            btnGomitas.Margin = new Padding(2);
+            btnGomitas.Name = "btnGomitas";
+            btnGomitas.Size = new Size(140, 114);
+            btnGomitas.TabIndex = 46;
+            btnGomitas.Text = "Gomitas de Café";
+            btnGomitas.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnGomitas.UseVisualStyleBackColor = false;
+            btnGomitas.Click += btnGomitas_Click;
             // 
-            // btnComida2
+            // btnPanini
             // 
-            btnComida2.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida2.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida2.Cursor = Cursors.Hand;
-            btnComida2.FlatAppearance.BorderSize = 0;
-            btnComida2.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida2.FlatStyle = FlatStyle.Flat;
-            btnComida2.ForeColor = Color.White;
-            btnComida2.Image = Properties.Resources.PaniniQueso;
-            btnComida2.Location = new Point(235, 30);
-            btnComida2.Margin = new Padding(2);
-            btnComida2.Name = "btnComida2";
-            btnComida2.Size = new Size(140, 114);
-            btnComida2.TabIndex = 45;
-            btnComida2.Text = "Panini de queso";
-            btnComida2.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida2.UseVisualStyleBackColor = false;
+            btnPanini.BackColor = Color.FromArgb(232, 174, 137);
+            btnPanini.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPanini.Cursor = Cursors.Hand;
+            btnPanini.FlatAppearance.BorderSize = 0;
+            btnPanini.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnPanini.FlatStyle = FlatStyle.Flat;
+            btnPanini.ForeColor = Color.White;
+            btnPanini.Image = Properties.Resources.PaniniQueso;
+            btnPanini.Location = new Point(235, 30);
+            btnPanini.Margin = new Padding(2);
+            btnPanini.Name = "btnPanini";
+            btnPanini.Size = new Size(140, 114);
+            btnPanini.TabIndex = 45;
+            btnPanini.Text = "Panini de queso";
+            btnPanini.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnPanini.UseVisualStyleBackColor = false;
+            btnPanini.Click += btnPanini_Click;
             // 
-            // btnComida4
+            // btnTorta
             // 
-            btnComida4.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida4.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida4.Cursor = Cursors.Hand;
-            btnComida4.FlatAppearance.BorderSize = 0;
-            btnComida4.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida4.FlatStyle = FlatStyle.Flat;
-            btnComida4.ForeColor = Color.White;
-            btnComida4.Image = Properties.Resources.SliceTorta;
-            btnComida4.Location = new Point(43, 192);
-            btnComida4.Margin = new Padding(2);
-            btnComida4.Name = "btnComida4";
-            btnComida4.Size = new Size(140, 114);
-            btnComida4.TabIndex = 44;
-            btnComida4.Text = "Slice de Torta Marmoleada";
-            btnComida4.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida4.UseVisualStyleBackColor = false;
+            btnTorta.BackColor = Color.FromArgb(232, 174, 137);
+            btnTorta.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTorta.Cursor = Cursors.Hand;
+            btnTorta.FlatAppearance.BorderSize = 0;
+            btnTorta.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnTorta.FlatStyle = FlatStyle.Flat;
+            btnTorta.ForeColor = Color.White;
+            btnTorta.Image = Properties.Resources.SliceTorta;
+            btnTorta.Location = new Point(43, 192);
+            btnTorta.Margin = new Padding(2);
+            btnTorta.Name = "btnTorta";
+            btnTorta.Size = new Size(140, 114);
+            btnTorta.TabIndex = 44;
+            btnTorta.Text = "Slice de Torta Marmoleada";
+            btnTorta.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnTorta.UseVisualStyleBackColor = false;
+            btnTorta.Click += btnTorta_Click;
             // 
-            // btnComida1
+            // btnPanqueque
             // 
-            btnComida1.BackColor = Color.FromArgb(232, 174, 137);
-            btnComida1.BackgroundImageLayout = ImageLayout.Stretch;
-            btnComida1.Cursor = Cursors.Hand;
-            btnComida1.FlatAppearance.BorderSize = 0;
-            btnComida1.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btnComida1.FlatStyle = FlatStyle.Flat;
-            btnComida1.ForeColor = Color.White;
-            btnComida1.Image = Properties.Resources.PanCake;
-            btnComida1.Location = new Point(43, 30);
-            btnComida1.Margin = new Padding(2);
-            btnComida1.Name = "btnComida1";
-            btnComida1.Size = new Size(140, 114);
-            btnComida1.TabIndex = 43;
-            btnComida1.Text = "Panqueque";
-            btnComida1.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnComida1.UseVisualStyleBackColor = false;
+            btnPanqueque.BackColor = Color.FromArgb(232, 174, 137);
+            btnPanqueque.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPanqueque.Cursor = Cursors.Hand;
+            btnPanqueque.FlatAppearance.BorderSize = 0;
+            btnPanqueque.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnPanqueque.FlatStyle = FlatStyle.Flat;
+            btnPanqueque.ForeColor = Color.White;
+            btnPanqueque.Image = Properties.Resources.PanCake;
+            btnPanqueque.Location = new Point(43, 30);
+            btnPanqueque.Margin = new Padding(2);
+            btnPanqueque.Name = "btnPanqueque";
+            btnPanqueque.Size = new Size(140, 114);
+            btnPanqueque.TabIndex = 43;
+            btnPanqueque.Text = "Panqueque";
+            btnPanqueque.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnPanqueque.UseVisualStyleBackColor = false;
+            btnPanqueque.Click += btnPanqueque_Click;
             // 
             // panelDgv
             // 
@@ -411,24 +426,24 @@
             dgvDatos.BorderStyle = BorderStyle.None;
             dgvDatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvDatos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle5.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvDatos.ColumnHeadersHeight = 45;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvDatos.DefaultCellStyle = dataGridViewCellStyle6;
             dgvDatos.EnableHeadersVisualStyles = false;
             dgvDatos.GridColor = Color.Maroon;
             dgvDatos.Location = new Point(14, 43);
@@ -436,21 +451,21 @@
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.Salmon;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Maroon;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.Salmon;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.Maroon;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgvDatos.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle4.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = Color.White;
+            dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle8;
             dgvDatos.RowTemplate.Height = 33;
             dgvDatos.Size = new Size(318, 341);
             dgvDatos.TabIndex = 2;
@@ -470,6 +485,7 @@
             btnMas.Size = new Size(60, 49);
             btnMas.TabIndex = 3;
             btnMas.UseVisualStyleBackColor = false;
+            btnMas.Click += btnMas_Click;
             // 
             // btnMenos
             // 
@@ -486,17 +502,18 @@
             btnMenos.Size = new Size(60, 49);
             btnMenos.TabIndex = 4;
             btnMenos.UseVisualStyleBackColor = false;
+            btnMenos.Click += btnMenos_Click;
             // 
-            // label1
+            // lblNombre
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(28, 16);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(202, 27);
-            label1.TabIndex = 5;
-            label1.Text = "Comida o Bebida";
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Century Gothic", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblNombre.Location = new Point(177, 24);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(202, 27);
+            lblNombre.TabIndex = 5;
+            lblNombre.Text = "Comida o Bebida";
             // 
             // label2
             // 
@@ -560,18 +577,53 @@
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = false;
             // 
+            // lblCantidad
+            // 
+            lblCantidad.AutoSize = true;
+            lblCantidad.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCantidad.Location = new Point(321, 118);
+            lblCantidad.Name = "lblCantidad";
+            lblCantidad.Size = new Size(24, 25);
+            lblCantidad.TabIndex = 11;
+            lblCantidad.Text = "0";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(21, 24);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 27);
+            label1.TabIndex = 12;
+            label1.Text = "Código";
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Century Gothic", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblCodigo.Location = new Point(117, 24);
+            lblCodigo.Margin = new Padding(2, 0, 2, 0);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(24, 27);
+            lblCodigo.TabIndex = 13;
+            lblCodigo.Text = "0";
+            // 
             // frmCatalogue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 214, 180);
             ClientSize = new Size(970, 591);
+            Controls.Add(lblCodigo);
+            Controls.Add(label1);
+            Controls.Add(lblCantidad);
             Controls.Add(btnAgregar);
             Controls.Add(pictureBox1);
             Controls.Add(lblPrecio);
             Controls.Add(lblCantComprar);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblNombre);
             Controls.Add(btnMenos);
             Controls.Add(btnMas);
             Controls.Add(panelTCM);
@@ -604,24 +656,27 @@
         private Button btnCancelar;
         private Button btnMas;
         private Button btnMenos;
-        private Label label1;
+        private Label lblNombre;
         private Label label2;
         private Label lblCantComprar;
         private Label lblPrecio;
         private PictureBox pictureBox1;
-        private Button btnBebida3;
-        private Button btnBebida6;
-        private Button btnBebida5;
-        private Button btnBebida2;
-        private Button btnBebida4;
-        private Button btnBebida1;
-        private Button btnComida3;
-        private Button btnComida6;
-        private Button btnComida5;
-        private Button btnComida2;
-        private Button btnComida4;
-        private Button btnComida1;
+        private Button btnTeCaliente;
+        private Button btnCafeCaliente;
+        private Button btnCafeHelado;
+        private Button btnTeLimon;
+        private Button btnLimonada;
+        private Button btnFrapurrccino;
+        private Button btnPapas;
+        private Button btnRosquillas;
+        private Button btnGomitas;
+        private Button btnPanini;
+        private Button btnTorta;
+        private Button btnPanqueque;
         private System.Drawing.Printing.PrintDocument ImprimirFactura;
         private Button btnAgregar;
+        private Label lblCantidad;
+        private Label label1;
+        private Label lblCodigo;
     }
 }

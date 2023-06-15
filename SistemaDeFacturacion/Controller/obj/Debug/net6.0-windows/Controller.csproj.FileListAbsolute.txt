@@ -22,3 +22,16 @@ C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturaci
 C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\refint\Controller.dll
 C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.pdb
 C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\ref\Controller.dll
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\VisualWebAPI.deps.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\VisualWebAPI.runtimeconfig.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\WebAPI.deps.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\WebAPI.runtimeconfig.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\appsettings.Development.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\WebAPI.exe
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\VisualWebAPI.exe
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\VisualWebAPI.dll
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\WebAPI.dll
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\VisualWebAPI.pdb
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\bin\Debug\net6.0-windows\WebAPI.pdb
+C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\Controller\obj\Debug\net6.0-windows\Controller.csproj.CopyComplete

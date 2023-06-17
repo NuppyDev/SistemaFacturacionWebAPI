@@ -16,7 +16,5 @@ namespace WebAPI.Models.Clases
         [Required]
         public DateTime CreatedDate { get; set; }
         public string Customer { get; set; }
-        public List<Description> Descriptions { get; } = new();
-        public List<InvoiceDescription> InvoicesDescription { get; } = new();
     }
 }

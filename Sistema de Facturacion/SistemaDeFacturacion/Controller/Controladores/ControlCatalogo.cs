@@ -44,6 +44,7 @@ namespace Controler.Controladores
                     }
                     else
                     {
+                        MessageBox.Show("La paquetería de datos se ha perdido, los datos de productos no serán entregados a tiempo", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return t;
                     }
                 });

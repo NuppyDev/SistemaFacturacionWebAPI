@@ -115,9 +115,6 @@ namespace WebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("HistoricalId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TableId")
                         .HasColumnType("int");
 
@@ -125,8 +122,6 @@ namespace WebAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("InvoiceId");
-
-                    b.HasIndex("HistoricalId");
 
                     b.HasIndex("TableId");
 
@@ -150,10 +145,6 @@ namespace WebAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("InDeId");
-
-                    b.HasIndex("DescriptionId");
-
-                    b.HasIndex("InvoiceId");
 
                     b.ToTable("InvoiceDescription");
                 });
@@ -353,21 +344,21 @@ namespace WebAPI.Migrations
                         {
                             WaitersId = 1,
                             Birthday = new DateTime(2003, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 16, 22, 50, 53, 911, DateTimeKind.Local).AddTicks(6460),
+                            DateAdmission = new DateTime(2023, 6, 17, 12, 48, 21, 684, DateTimeKind.Local).AddTicks(836),
                             WaitersFullName = "Katou Megumi"
                         },
                         new
                         {
                             WaitersId = 2,
                             Birthday = new DateTime(2005, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateAdmission = new DateTime(2023, 6, 16, 22, 50, 53, 911, DateTimeKind.Local).AddTicks(6475),
+                            DateAdmission = new DateTime(2023, 6, 17, 12, 48, 21, 684, DateTimeKind.Local).AddTicks(855),
                             WaitersFullName = "Leon Scott Kennedy"
                         },
                         new
                         {
                             WaitersId = 3,
-                            Birthday = new DateTime(2023, 6, 16, 22, 50, 53, 911, DateTimeKind.Local).AddTicks(6478),
-                            DateAdmission = new DateTime(2023, 6, 16, 22, 50, 53, 911, DateTimeKind.Local).AddTicks(6477),
+                            Birthday = new DateTime(2023, 6, 17, 12, 48, 21, 684, DateTimeKind.Local).AddTicks(858),
+                            DateAdmission = new DateTime(2023, 6, 17, 12, 48, 21, 684, DateTimeKind.Local).AddTicks(858),
                             WaitersFullName = "Para Llevar"
                         });
                 });
@@ -385,10 +376,6 @@ namespace WebAPI.Migrations
 
             modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
                 {
-                    b.HasOne("WebAPI.Models.Clases.Historical", null)
-                        .WithMany("Invoices")
-                        .HasForeignKey("HistoricalId");
-
                     b.HasOne("WebAPI.Models.Clases.Tables", "Tables")
                         .WithMany("Invoices")
                         .HasForeignKey("TableId")
@@ -404,25 +391,6 @@ namespace WebAPI.Migrations
                     b.Navigation("Tables");
 
                     b.Navigation("Waiters");
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.InvoiceDescription", b =>
-                {
-                    b.HasOne("WebAPI.Models.Clases.Description", "Description")
-                        .WithMany("InvoicesDescription")
-                        .HasForeignKey("DescriptionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebAPI.Models.Clases.Invoice", "Invoice")
-                        .WithMany("InvoicesDescription")
-                        .HasForeignKey("InvoiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Description");
-
-                    b.Navigation("Invoice");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Products", b =>
@@ -446,21 +414,6 @@ namespace WebAPI.Migrations
             modelBuilder.Entity("WebAPI.Models.Clases.Categories", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.Description", b =>
-                {
-                    b.Navigation("InvoicesDescription");
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.Historical", b =>
-                {
-                    b.Navigation("Invoices");
-                });
-
-            modelBuilder.Entity("WebAPI.Models.Clases.Invoice", b =>
-                {
-                    b.Navigation("InvoicesDescription");
                 });
 
             modelBuilder.Entity("WebAPI.Models.Clases.Products", b =>

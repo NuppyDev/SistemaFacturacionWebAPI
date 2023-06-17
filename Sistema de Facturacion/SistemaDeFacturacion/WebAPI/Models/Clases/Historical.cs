@@ -9,7 +9,6 @@ namespace WebAPI.Models.Clases
         public int HistoricalId { get; set; }
         [Required]
         public int InvoiceId { get; set; }
-        public List<Invoice> Invoices { get; } = new();
 
     }
 }

@@ -10,7 +10,7 @@ namespace Controler.Controladores
     public class ControlDescripcion
     {
         public DescriptionCreateDto d;
-        public async void CrearDescription(int idFactura, int idProducto, int cant, decimal precio)
+        public async Task CrearDescription(int idFactura, int idProducto, int cant, decimal precio)
         {
             decimal subtotal = cant * precio;
             decimal iva = Convert.ToDecimal(1.15);
@@ -38,7 +38,7 @@ namespace Controler.Controladores
                 var content = new StringContent(seriDescri, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync("https://localhost:7051/api/Description", content);
                 if (!response.IsSuccessStatusCode)
-                    MessageBox.Show($"Error al guardar la descripcion: {response.Content.ReadAsStringAsync().Result}");
+                    MessageBox.Show($"Error al meowguardar la descripcion: {response.Content.ReadAsStringAsync().Result}", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private async Task<List<int>> ObtenerIdDescription(int numFact)
@@ -59,7 +59,8 @@ namespace Controler.Controladores
                     }
                     else
                     {
-                        return f=null!;
+                        MessageBox.Show("La paquetería de datos se ha perdido, los datos de descripciones no serán entregados a tiempo", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return f =null!;
                     }
                 });
             }

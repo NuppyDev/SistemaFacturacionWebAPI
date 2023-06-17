@@ -14,14 +14,15 @@ namespace VisualWebAPI
 {
     public partial class frmInitiation : Form
     {
+        int id = 0;
         public frmInitiation()
         {
             InitializeComponent();
         }
 
         private void btnOrdenar_Click(object sender, EventArgs e)
-        {
-            int id = 7;
+        {   
+            id = 7;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -32,11 +33,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa1_Click(object sender, EventArgs e)
         {
-            int id = 1;
+            id = 1;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -47,11 +49,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa4_Click(object sender, EventArgs e)
         {
-            int id = 4;
+            id = 4;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -62,11 +65,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa3_Click(object sender, EventArgs e)
         {
-            int id = 3;
+            id = 3;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -77,11 +81,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa6_Click(object sender, EventArgs e)
         {
-            int id = 6;
+            id = 6;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -92,11 +97,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa5_Click(object sender, EventArgs e)
         {
-            int id =5;
+            id = 5;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -107,11 +113,12 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
 
         private void btnMesa2_Click(object sender, EventArgs e)
         {
-            int id = 2;
+            id = 2;
             //Generamos la instancia hacia el frmInitiation
             frmCatalogue frmCatalogue = new frmCatalogue(id);
             this.Hide(); //Oculta el formulario actual
@@ -122,6 +129,7 @@ namespace VisualWebAPI
             //frmCatalogue.Location = new Point(192, 39);   // (x,y)
             frmCatalogue.Dock = DockStyle.Fill;
             this.Show(); //Muestrael formulario actual
+            id = 0;
         }
     }
 }

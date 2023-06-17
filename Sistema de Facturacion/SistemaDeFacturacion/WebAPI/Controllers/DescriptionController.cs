@@ -70,7 +70,7 @@ namespace WebAPI.Controllers
             await _db.Description.AddAsync(modelo);
             await _db.SaveChangesAsync();
 
-            return CreatedAtRoute("GetTables", new { id = modelo.DescriptionId }, modelo);
+            return CreatedAtRoute("GetDescription", new { id = modelo.DescriptionId }, modelo);
 
         }
 

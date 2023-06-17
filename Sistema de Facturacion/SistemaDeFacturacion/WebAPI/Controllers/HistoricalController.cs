@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<HistoricalDto>>(HistoricalList));
         }
 
-        [HttpGet("{id:int}", Name = "GetHistoricals")]
+        [HttpGet("{id:int}", Name = "GetHistorical")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

@@ -22,7 +22,5 @@ namespace WebAPI.Models.Clases
         public decimal SubTotal { get; set; }
         [Required]
         public decimal Total { get; set; }
-        public List<Invoice> Invoices { get; } = new();
-        public List<InvoiceDescription> InvoicesDescription { get; } = new();
     }
 }

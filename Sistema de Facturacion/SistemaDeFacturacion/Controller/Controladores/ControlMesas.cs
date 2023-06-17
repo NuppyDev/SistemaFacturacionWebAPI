@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Controler.Dto;
+using Newtonsoft.Json;
 using System.Text;
-using WebAPI.Models.Dto.Base;
+using Controler.Dto;
 
 namespace Controler.Controladores
 {
@@ -8,21 +9,19 @@ namespace Controler.Controladores
     {
         int t;
         string m;
-
-        public async Task<List<string>> ObtenerMesasYMeserosAsync(int id)
+        public async Task<MesasYMeseros> ObtenerMesasYMeserosAsync(int id)
         {
-            List<string> MesasYMeseros = new List<string>();
-            int numeroMesa = await ObtenerMesas(id);
-            string numeroMesas = Convert.ToString(numeroMesa);
-            string nombreMesero = await ObtenerNombreMeseros(numeroMesa);
-            int idMesero = await ObtenerMeserosId(numeroMesa);
-            MesasYMeseros.Add(numeroMesas);
-            MesasYMeseros.Add(nombreMesero);
-            MesasYMeseros.Add(idMesero.ToString());
-            return MesasYMeseros;
+            MesasYMeseros mm = new MesasYMeseros();
+            int numeroMesa = await ObtenerIdMesas(id);
+            int idMesero = await ObtenerMeserosConIdMesas(id);
+            string nombreMesero = await ObtenerNombreMeseros(idMesero);
+            mm.IdMesas = numeroMesa;
+            mm.NameMeseros = nombreMesero;
+            mm.IdMeseros = idMesero;
+            return mm;
         }
 
-        private async Task<int> ObtenerMesas(int id)
+        private async Task<int> ObtenerIdMesas(int id)
         {
             int resultado;
             using (var client = new HttpClient())
@@ -32,7 +31,6 @@ namespace Controler.Controladores
                     var response = await client.GetAsync(string.Format("{0}/{1}", "https://localhost:7051/api/Tables", id));
                     if (response.IsSuccessStatusCode)
                     {
-                        int t;
                         var tables = await response.Content.ReadAsStringAsync();
                         TablesDto mesa = JsonConvert.DeserializeObject<TablesDto>(tables);
                         t = mesa.TableId;
@@ -40,7 +38,30 @@ namespace Controler.Controladores
                     }
                     else
                     {
-                        return t = 0;
+                        return 0;
+                    }
+                });
+            }
+            return resultado;
+        }
+        private async Task<int> ObtenerMeserosConIdMesas(int id)
+        {
+            int resultado;
+            using (var client = new HttpClient())
+            {
+                resultado = await Task.Run(async () =>
+                {
+                    var response = await client.GetAsync(string.Format("{0}/{1}", "https://localhost:7051/api/Tables", id));
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var tables = await response.Content.ReadAsStringAsync();
+                        TablesDto mesa = JsonConvert.DeserializeObject<TablesDto>(tables);
+                        t = mesa.WaitersId;
+                        return t;
+                    }
+                    else
+                    {
+                        return 0;
                     }
                 });
             }
@@ -53,45 +74,21 @@ namespace Controler.Controladores
             {
                 mesero = await Task.Run(async () =>
                 {
-                    var response = await client.GetAsync(string.Format("{0}/{1}", "https://localhost:7051/api/Waiters", id));
-                    if (response.IsSuccessStatusCode)
+                    using (var response = await client.GetAsync("https://localhost:7051/api/Waiters"))
                     {
-                        string m;
-                        var waiters = await response.Content.ReadAsStringAsync();
-                        WaitersDto mese = JsonConvert.DeserializeObject<WaitersDto>(waiters);
-                        m = mese.WaitersFullName;
-                        return m;
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var waiters = await response.Content.ReadAsStringAsync();
+                            List<WaitersDto> mese = JsonConvert.DeserializeObject<List<WaitersDto>>(waiters);
+                            var me = mese.Where(x => x.WaitersId == id).FirstOrDefault();
+                            m = me.WaitersFullName;
+                            return m;
 
-                    }
-                    else
-                    {
-                        return m = "";
-                    }
-                });
-            }
-            return mesero;
-        }
-        private async Task<int> ObtenerMeserosId(int id)
-        {
-            int mesero;
-            using (var client = new HttpClient())
-            {
-                mesero = await Task.Run(async () =>
-                {
-
-                    int m;
-                    var response = await client.GetAsync(string.Format("{0}/{1}", "https://localhost:7051/api/Waiters", id));
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var waiters = await response.Content.ReadAsStringAsync();
-                        WaitersDto mese = JsonConvert.DeserializeObject<WaitersDto>(waiters);
-                        m = mese.WaitersId;
-                        return m;
-
-                    }
-                    else
-                    {
-                        return m = 0;
+                        }
+                        else
+                        {
+                            return "";
+                        }
                     }
                 });
             }

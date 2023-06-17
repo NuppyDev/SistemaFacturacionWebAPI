@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Se creará un sistema de facturación intuitivo y agradable a la vista del usuario para facilitar el proceso de facturación
+de pedidos de clientes frecuentes y ocasionales en la cafetería. Cada factura generada se almacenará como registro
+de venta histórico para respaldar las futuras decisiones de gestión.
+</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Este sistema requerirá el uso del lenguaje de programación orientado a objetos C#, una base de datos SQL Server,
+una computadora táctil o una Tablet con Windows 8 o superior, así como una impresora térmica para imprimir
+las facturas. Los datos de los empleados y los servicios/platillos a vender estarán predeterminados en la base de datos.</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>El objetivo es modernizar la cafetería y reemplazar las facturas comerciales tradicionales. El uso de este sistema
+permitirá agilizar el proceso de facturación al simplemente hacer clic o presionar un botón, además de proporcionar
+registros de ventas históricos para respaldar la toma de decisiones.</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>El equipo de desarrollo y diseño presentará un manual de usuarios que servirá como referencia para el empleado
+responsable de utilizar el sistema. Además, se proporcionará capacitación personalizada por parte de los
+desarrolladores del sistema para garantizar una comprensión completa de su funcionalidad.</value>
+  </data>
 </root>

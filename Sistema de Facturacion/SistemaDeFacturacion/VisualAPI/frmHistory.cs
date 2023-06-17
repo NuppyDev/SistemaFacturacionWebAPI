@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controler.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace VisualWebAPI
 {
     public partial class frmHistory : Form
     {
+        ControlHistorical ch = new ControlHistorical();
         public frmHistory()
         {
             InitializeComponent();
+            Llenado();
+        }
+
+        public async void Llenado()
+        {
+            await ch.ObtencionFacturas(dgvDatos);
         }
     }
 }

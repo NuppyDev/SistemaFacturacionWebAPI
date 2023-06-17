@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj": {}
+    "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj": {
+    "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
         "projectName": "Controler",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
+        "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj"
+              "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj": {
+    "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
         "projectName": "VisualWebAPI",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
+        "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -104,11 +104,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj"
+              "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj"
               },
-              "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj"
+              "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj"
               }
             }
           }
@@ -145,14 +145,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

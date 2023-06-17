@@ -68,6 +68,9 @@
             lblCantidad = new Label();
             label1 = new Label();
             lblCodigo = new Label();
+            lblMesero = new Label();
+            lblMesa = new Label();
+            lblIdMesero = new Label();
             panelTCM.SuspendLayout();
             tcMenu.SuspendLayout();
             tpBebida.SuspendLayout();
@@ -99,6 +102,7 @@
             tcMenu.SelectedIndex = 0;
             tcMenu.Size = new Size(623, 370);
             tcMenu.TabIndex = 0;
+            tcMenu.MouseDown += tcMenu_MouseDown;
             // 
             // tpBebida
             // 
@@ -658,12 +662,45 @@
             lblCodigo.TabIndex = 13;
             lblCodigo.Text = "0";
             // 
+            // lblMesero
+            // 
+            lblMesero.AutoSize = true;
+            lblMesero.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblMesero.Location = new Point(235, 202);
+            lblMesero.Name = "lblMesero";
+            lblMesero.Size = new Size(51, 16);
+            lblMesero.TabIndex = 14;
+            lblMesero.Text = "Mesero";
+            // 
+            // lblMesa
+            // 
+            lblMesa.AutoSize = true;
+            lblMesa.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblMesa.Location = new Point(102, 202);
+            lblMesa.Name = "lblMesa";
+            lblMesa.Size = new Size(39, 16);
+            lblMesa.TabIndex = 15;
+            lblMesa.Text = "Mesa";
+            // 
+            // lblIdMesero
+            // 
+            lblIdMesero.AutoSize = true;
+            lblIdMesero.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblIdMesero.Location = new Point(147, 202);
+            lblIdMesero.Name = "lblIdMesero";
+            lblIdMesero.Size = new Size(19, 16);
+            lblIdMesero.TabIndex = 16;
+            lblIdMesero.Text = "ID";
+            // 
             // frmCatalogue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 214, 180);
             ClientSize = new Size(970, 591);
+            Controls.Add(lblIdMesero);
+            Controls.Add(lblMesa);
+            Controls.Add(lblMesero);
             Controls.Add(lblCodigo);
             Controls.Add(label1);
             Controls.Add(lblCantidad);
@@ -682,6 +719,7 @@
             Name = "frmCatalogue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCatalogue";
+            Load += frmCatalogue_Load;
             panelTCM.ResumeLayout(false);
             tcMenu.ResumeLayout(false);
             tpBebida.ResumeLayout(false);
@@ -732,5 +770,8 @@
         private Label lblSubTotal;
         private Label lblTo;
         private Label lblTotal;
+        private Label lblMesero;
+        private Label lblMesa;
+        private Label lblIdMesero;
     }
 }

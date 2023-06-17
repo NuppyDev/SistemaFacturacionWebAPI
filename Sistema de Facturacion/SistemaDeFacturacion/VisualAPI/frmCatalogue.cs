@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controler.Controladores;
+using Controler.Dto;
 
 namespace VisualWebAPI
 {
@@ -17,33 +18,39 @@ namespace VisualWebAPI
         #region Inicializacion de Variables
         public const string PathImageLogo = @"C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualAPI\Resources\Gatito.png";
         public const string PathImageDespedida = @"C:\Users\Usuario\GitHub Repositorios\SistemaFacturacionWebAPI\SistemaDeFacturacion\VisualAPI\Resources\GatitoDespedida.png";
-        public int idMesa, idProducto, cant, numerofactura=0;
-        List<string> listaMesas, listaProducto;
+        public int IdMesa, idProducto, cant, numerofactura = 0;
+        List<string> listaProducto;
+        MesasYMeseros mm = new MesasYMeseros();
         List<int> idDescripciones = new List<int>(), idproductos = new List<int>();
         List<descri> descrip = new List<descri>();
         FuncionImprimir imprimir = new FuncionImprimir();
         descri descri;
+        DateTime dt = new DateTime();
         ControlMesas cm = new ControlMesas(); ControlCatalogo cc = new ControlCatalogo();
         ControlDescripcion cd = new ControlDescripcion(); ControlFacturas cf = new ControlFacturas();
-        ControlFacturaDescripcion cfd = new ControlFacturaDescripcion();
+        ControlFacturaDescripcion cfd = new ControlFacturaDescripcion(); ControlHistorical ch = new ControlHistorical();
         #endregion
         public frmCatalogue(int idMesa)
         {
             InitializeComponent();
-            this.idMesa = idMesa;
-            LlenadoListaMesas();
+            this.IdMesa = idMesa;
+            LlenadoListaMesas(IdMesa);
             //ObtenerUltimaFactura();
             numerofactura++;
+            dt = DateTime.Now;
         }
 
         #region BotonesFuncionalesBasicos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            limpieza();
+            Limpieza();
             this.Close();
         }
         private void btnMas_Click(object sender, EventArgs e)
         {
+            lblMesa.Text = mm.IdMesas.ToString();
+            lblMesero.Text = mm.NameMeseros;
+            lblIdMesero.Text = mm.IdMeseros.ToString();
             cant++;
             lblCantidad.Text = cant.ToString();
         }
@@ -66,9 +73,9 @@ namespace VisualWebAPI
         #endregion
 
         #region FuncionesLlenadoObtencionCreacionEnviado
-        public async void LlenadoListaMesas()
+        public async void LlenadoListaMesas(int id)
         {
-            listaMesas = await cm.ObtenerMesasYMeserosAsync(idMesa);
+            mm = await cm.ObtenerMesasYMeserosAsync(id);
         }
         public async Task LlenadoListaProductos(int e)
         {
@@ -78,27 +85,46 @@ namespace VisualWebAPI
         {
             numerofactura = await cf.ObtenerUltimaFacturas();
         }
-        public async void ObtenerIdDescripciones()
+        public async Task ObtenerIdDescripciones()
         {
             idDescripciones = await cd.ObtenerId(numerofactura);
         }
         public async Task LlenadoFactura()
         {
-            await cf.CrearFacturas(Convert.ToInt32(listaMesas[0]), Convert.ToInt32(listaMesas[2]), DateTime.Now);
+            await cf.CrearFacturas(mm.IdMesas, mm.IdMeseros, dt);
         }
         public async Task CrearINDE()
         {
             foreach (int i in idDescripciones)
                 await cfd.CrearInDe(numerofactura, i);
         }
+        public async void CrearHistorial()
+        {
+            await ch.CrearHistorial(numerofactura);
+        }
+        public async Task EnvioDeDatos()
+        {
+            await ObtenerIdDescripciones();
+            await LlenadoFactura();
+            await CrearINDE();
+            CrearHistorial();
+        }
         #endregion
 
         #region Funciones
-        public void limpieza()
+        public void Limpieza()
         {
-            idMesa = 0; idProducto = 0; numerofactura--;
-            listaMesas.Clear(); listaProducto.Clear(); descrip.Clear(); idDescripciones.Clear();
-            dgvDatos.DataSource = null;
+            IdMesa = 0; idProducto = 0; numerofactura--;
+            dgvDatos.DataSource = null; cant = 0;
+            descrip.Clear();
+        }
+        public void LimpiezaDatos()
+        {
+            lblCantidad.Text = "0";
+            lblCodigo.Text = "0";
+            lblPrecio.Text = "00.00";
+            lblNombre.Text = "Comida o Bebida";
+            cant = 0;
         }
         public void obtenerTotal()
         {
@@ -127,18 +153,16 @@ namespace VisualWebAPI
 
         #endregion
 
-
         #region Imprimir
         private void Imprimir()
         {
-            imprimir.Imprimir(dgvDatos, numerofactura, listaMesas[1], Convert.ToInt32(listaMesas[0]), lblSubTotal.Text, lblTotal.Text);
+            imprimir.Imprimir(dgvDatos, numerofactura, mm.NameMeseros, mm.IdMesas, lblSubTotal.Text, lblTotal.Text);
         }
         private async void btnImprimir_Click(object sender, EventArgs e)
         {
-            await LlenadoFactura();
-            await CrearINDE();
+            await EnvioDeDatos();
             Imprimir();
-            limpieza();
+            Limpieza();
             this.Close();
         }
         #endregion
@@ -259,7 +283,7 @@ namespace VisualWebAPI
             {
                 if (lblCantidad.Text != "0")
                 {
-                    cd.CrearDescription(numerofactura, Convert.ToInt32(lblCodigo.Text), Convert.ToInt32(lblCantidad.Text), Convert.ToDecimal(lblPrecio.Text));
+                    await cd.CrearDescription(numerofactura, Convert.ToInt32(lblCodigo.Text), Convert.ToInt32(lblCantidad.Text), Convert.ToDecimal(lblPrecio.Text));
                     int co = Convert.ToInt32(lblCodigo.Text);
                     int ca = Convert.ToInt32(lblCantidad.Text);
                     string nom = lblNombre.Text;
@@ -273,6 +297,7 @@ namespace VisualWebAPI
                     dgvDatos.DataSource = descrip;
                     obtenerSubTotal();
                     obtenerTotal();
+                    LimpiezaDatos();
                 }
                 else
                 {
@@ -283,6 +308,14 @@ namespace VisualWebAPI
             {
                 MessageBox.Show("¿Se puede crear una factura sin productos?", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private async void frmCatalogue_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void tcMenu_MouseDown(object sender, MouseEventArgs e)
+        {
         }
     }
 }

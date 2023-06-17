@@ -55,7 +55,7 @@ namespace VisualWebAPI
             Ticket1.TextoIzquierda(" ");
             string impresora = "Microsoft XPS Document Writer";
             Ticket1.ImprimirTiket(impresora);
-            MessageBox.Show("Gracias por preferirnos");
+            MessageBox.Show("Gracias por preferirnos", "MeowSystem Imprimiendo...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

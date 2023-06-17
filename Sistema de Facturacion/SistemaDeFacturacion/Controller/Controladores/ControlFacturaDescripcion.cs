@@ -25,7 +25,7 @@ namespace Controler.Controladores
                 var content = new StringContent(seriDesFac, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync("https://localhost:7051/api/InvoiceDescription", content);
                 if (!response.IsSuccessStatusCode)
-                    MessageBox.Show($"Error al guardar la union: {response.Content.ReadAsStringAsync().Result}");
+                    MessageBox.Show($"Error al guardar la union: DescricionFactura {response.Content.ReadAsStringAsync().Result}", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

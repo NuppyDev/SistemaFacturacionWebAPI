@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tM19rKLTUE/u5Bk6hRAX6Hdc6z7+YkcF8vvj48prHJJ4Jw2uc4GdSc9lIgUkxYxDvTly2TdMaQjC0kVIkz3Okg==",
+  "dgSpecHash": "50Hbasb9wyEVIt42z7LwURiWchLa+j+Ut8wo028iyKNOOolzG0748w+5i1wddJ30jLHWR6oX5hqePCLEhP+Zwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SyJ7Tai56I8YaTlY1ZHd+g+BFsLAJdLpUXmiC/VfBAotkOqrLbNZ9yohT+3rsMj2ZS/E+tocjAOvD5MZNk5KLg==",
+  "dgSpecHash": "5BxqbgMkII4djIq6qlb8db08yGepHe+CkyClW3LmZrs5iDLJ3jslNLIyPODJ8GHK9u8F+w2XqyHBZ2minfdv9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\VisualAPI\\VisualWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

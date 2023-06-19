@@ -11,16 +11,21 @@ namespace Controler.Controladores
 {
     public class ControlFacturas
     {
+        //Es utilizado por la vista para obtener la ultima factura para agregarle uno y asi para los nuevos registros
+        //que necesitan el numero de factura
         public async Task<int> ObtenerUltimaFacturas()
         {
             int lastFac = await ObtenerUltimaFactura();
             return lastFac;
         }
+        //Es utilizado para la vista para que retorne todas las facturas
         public async Task<List<InvoiceDto>> ObtenerFacturas()
         {
             List<InvoiceDto> list = await ObtenerFactura();
             return list;
         }
+
+        //Esta lista retorna un entero que es el id de la ultima factura registrada
         private async Task<int> ObtenerUltimaFactura()
         {
             int resultado;
@@ -47,6 +52,8 @@ namespace Controler.Controladores
             }
             return resultado;
         }
+
+        //Esta tarea obtiene una lista de facturas
         private async Task<List<InvoiceDto>> ObtenerFactura()
         {
             using (var client = new HttpClient())

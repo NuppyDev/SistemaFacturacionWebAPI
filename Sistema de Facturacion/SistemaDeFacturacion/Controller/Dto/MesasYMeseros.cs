@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controler.Dto
 {
+    //Clase creada para obtener datos importantes para transferirse
     public class MesasYMeseros
     {
         public int IdMesas { get; set;}

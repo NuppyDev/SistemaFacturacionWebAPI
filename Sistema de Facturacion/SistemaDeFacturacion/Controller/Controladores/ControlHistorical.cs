@@ -10,7 +10,11 @@ namespace Controler.Controladores
 {
     public class ControlHistorical
     {
+        //Se declara un controlfacturas para usar la tarea de obtener todas las facturas
         ControlFacturas cf = new ControlFacturas();
+
+        //Tarea que se utiliza en el visual donde se juntan las listas de factura y historico para obtener solamente
+        //datos relevantes (ids, fecha factura, cliente y mesa) para mostrar en el visual con datagridview
         public async Task ObtencionFacturas(DataGridView dgvDatos)
         {
             List<HistoricalDto> h = await ObtenerHistorial();
@@ -30,6 +34,8 @@ namespace Controler.Controladores
             dgvDatos.DataSource =null;
             dgvDatos.DataSource = juntacion;
         }
+
+        //Esta devuelve todos los datos historicos que hay
         private async Task<List<HistoricalDto>> ObtenerHistorial()
         {
             using (var client = new HttpClient())
@@ -50,12 +56,14 @@ namespace Controler.Controladores
                 }
             }
         }
+        //Es utilizado para la vista para crear un historial solamente con el numero de factura
         public async Task CrearHistorial(int idFactura)
         {
             HistoricalCreateDto i = new HistoricalCreateDto();
             i.InvoiceId = idFactura;
             await CrearHistorico(i);
         }
+        //Tarea que crea un historico con un parametro de HistoricalCreateDto
         private async Task CrearHistorico(HistoricalCreateDto idd)
         {
             using (var client = new HttpClient())

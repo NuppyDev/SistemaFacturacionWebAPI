@@ -10,6 +10,8 @@ namespace Controler.Controladores
     public class ControlDescripcion
     {
         public DescriptionCreateDto d;
+
+        //Tarea publica para presentarse en vista donde se crea una factura
         public async Task CrearDescription(int idFactura, int idProducto, int cant, decimal precio)
         {
             decimal subtotal = cant * precio;
@@ -25,11 +27,13 @@ namespace Controler.Controladores
             await CrearDescripcion(des);
         }
 
+        //Tarea publica para utilizarse en la vista para obtener id
         public async Task<List<int>> ObtenerId(int numfact)
         {
             List<int> id = await ObtenerIdDescription(numfact);
             return id;
         }
+        //Esta Tarea permite crear una descripicion enviando un DescriptionCreateDto
         private async Task CrearDescripcion(DescriptionCreateDto des)
         {
             using (var client = new HttpClient())
@@ -41,6 +45,8 @@ namespace Controler.Controladores
                     MessageBox.Show($"Error al meowguardar la descripcion: {response.Content.ReadAsStringAsync().Result}", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //Esta tarea es para devolver una lista de todos los id de las descripciones que se usaron en una factura
+        //especifico
         private async Task<List<int>> ObtenerIdDescription(int numFact)
         {
             List<int> resultado;

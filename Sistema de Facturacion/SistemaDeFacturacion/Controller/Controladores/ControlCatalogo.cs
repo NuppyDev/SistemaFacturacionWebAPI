@@ -11,6 +11,8 @@ namespace Controler.Controladores
     public class ControlCatalogo
     {
         string codigo, nombre, precio;
+
+        //Esta tarea utiliza los datos de un producto para guardarlos en una lista para usarse en vista
         public async Task<List<string>> Productos(int id)
         {
             List<String> productos = new List<String>();
@@ -23,6 +25,8 @@ namespace Controler.Controladores
             productos.Add(precio);
             return productos;
         }
+
+        //Esta tarea devuelve los productos con respecto al id deseado de la base de datos
         private async Task<ProductsDto> ObtenerProducto(int id)
         {
             ProductsDto resultado;

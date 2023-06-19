@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Controler
 {
+    //Clase para crear facturas
     public class clsFunciones
     {
         public class CreaTicket

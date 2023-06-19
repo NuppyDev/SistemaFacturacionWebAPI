@@ -10,6 +10,8 @@ namespace Controler.Controladores
 {
     public class ControlFacturaDescripcion
     {
+        //Esta tarea publica es la que se usa para frmCatalogue cuando se termina de crear una factura
+        //Recibe dos enteros, idFactura e idDescription
         public async Task CrearInDe(int idFactura, int idDescripcion)
         {
             InvoiceDescriptionCreateDto i = new InvoiceDescriptionCreateDto();
@@ -17,6 +19,8 @@ namespace Controler.Controladores
             i.InvoiceId = idFactura;
             await CrearDescripcionFactura(i);
         }
+
+        //Esta tarea privada es la que crea DescripcionFactura Cuando se le envia un InvoiceDescriptionCreateDto a la web api
         private async Task CrearDescripcionFactura(InvoiceDescriptionCreateDto idd)
         {
             using (var client = new HttpClient())

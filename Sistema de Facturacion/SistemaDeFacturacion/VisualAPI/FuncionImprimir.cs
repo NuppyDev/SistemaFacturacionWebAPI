@@ -10,6 +10,7 @@ namespace VisualWebAPI
 {
     public class FuncionImprimir
     {
+        //Variable que se declara para usar sus metodos para la creacion de facturas
         clsFunciones clsFunciones;
         public void Imprimir(DataGridView dgvDatos, int numFactura, string mesero, int mesa, string sub, string to)
         {

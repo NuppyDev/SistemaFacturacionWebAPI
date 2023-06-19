@@ -65,7 +65,7 @@ namespace VisualWebAPI
         private void btnMenos_Click(object sender, EventArgs e)
         {
             //Este boton hace que se muestre la cantidad que se va a comprar por medio de un boton que
-            //aumenta cada vez que es precionado
+            //reduce cada vez que es precionado
             if (cant > 0)
             {
                 //Si la cantidad que antes era mayor que cero, se reduce

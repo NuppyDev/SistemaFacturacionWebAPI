@@ -26,7 +26,7 @@ namespace Controler.Controladores
             return productos;
         }
 
-        //Esta tarea devuelve los productos con respecto al id deseado de la base de datos
+        //Esta tarea devuelve los productos con respecto al id deseado en la base de datos
         private async Task<ProductsDto> ObtenerProducto(int id)
         {
             ProductsDto resultado;

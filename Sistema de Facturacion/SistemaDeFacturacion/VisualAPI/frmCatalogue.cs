@@ -39,7 +39,6 @@ namespace VisualWebAPI
             LlenadoListaMesas(IdMesa);
             //Metodo que cada vez que se muestre este formulario obtener el ultima factura hecha para
             //solamente sumarle uno y ser usado
-            ObtenerUltimaFactura();
             dt = DateTime.Now;
         }
 
@@ -94,7 +93,7 @@ namespace VisualWebAPI
             //Metodo para guardar los datos de los productos en una variable coleccionable de este formulario
             listaProducto = await cc.Productos(id);
         }
-        public async void ObtenerUltimaFactura()
+        public async Task ObtenerUltimaFactura()
         {
             //Metodo para guardar los datos de la ultima factura registrada en una variable de este formulario
             numerofactura = await cf.ObtenerUltimaFacturas();
@@ -190,11 +189,18 @@ namespace VisualWebAPI
             //Al darle clic a este boton, aumenta el numero de factura, se envian los datos a la api
             //se imprime la factura,
             //se limpia todo y se cierra
-            numerofactura++;
-            await EnvioDeDatos();
-            Imprimir();
-            Limpieza();
-            this.Close();
+            if (lblTotal.Text != "0.00")
+            {
+                await EnvioDeDatos();
+                Imprimir();
+                Limpieza();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("¿Imprimir factura sin datos? Escoge las opciones purr favor", "Error en el MeowSystem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         #endregion
 
@@ -352,6 +358,8 @@ namespace VisualWebAPI
 
         private async void frmCatalogue_Load(object sender, EventArgs e)
         {
+            await ObtenerUltimaFactura();
+            numerofactura++;
         }
 
         private void tcMenu_MouseDown(object sender, MouseEventArgs e)

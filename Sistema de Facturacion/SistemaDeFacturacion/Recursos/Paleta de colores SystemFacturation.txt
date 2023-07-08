@@ -1,0 +1,8 @@
+F8F7F3 Iconos
+F8C7A9 Color de Fondo
+912D2D Menu
+DA4444 Titulo
+A57070 Info
+E05C5C Botones Normal
+F4C5C5 Letra Boton
+EA9292 Boton Seleccionado

@@ -504,3 +504,4 @@ C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\Si
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\VisualAPI\obj\Debug\net6.0-windows\VisualWebAPI.pdb
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\VisualAPI\obj\Debug\net6.0-windows\VisualWebAPI.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\VisualAPI\obj\Debug\net6.0-windows\ref\VisualWebAPI.dll
+C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\VisualAPI\obj\Debug\net6.0-windows\VisualWebAPI.frmLogin.resources

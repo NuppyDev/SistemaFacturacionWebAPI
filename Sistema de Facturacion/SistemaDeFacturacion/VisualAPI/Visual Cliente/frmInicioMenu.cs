@@ -57,15 +57,5 @@ namespace VisualWebAPI
         {
             AbrirFormInPanel(new frmInitiation());
         }
-
-        private void btnHistoryMenu_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new frmHistory());
-        }
-
-        private void btnInformationMenu_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new frmInformation());
-        }
     }
 }

@@ -32,8 +32,6 @@
             btnCerrarMenu = new Button();
             MenuVertical = new Panel();
             btnInitiationMenu = new Button();
-            btnHistoryMenu = new Button();
-            btnInformationMenu = new Button();
             panelContenedor = new Panel();
             brTitulo.SuspendLayout();
             MenuVertical.SuspendLayout();
@@ -71,8 +69,6 @@
             // 
             MenuVertical.BackColor = Color.FromArgb(232, 174, 137);
             MenuVertical.Controls.Add(btnInitiationMenu);
-            MenuVertical.Controls.Add(btnHistoryMenu);
-            MenuVertical.Controls.Add(btnInformationMenu);
             MenuVertical.Dock = DockStyle.Left;
             MenuVertical.Location = new Point(0, 23);
             MenuVertical.Margin = new Padding(2);
@@ -95,38 +91,6 @@
             btnInitiationMenu.TabIndex = 0;
             btnInitiationMenu.UseVisualStyleBackColor = false;
             btnInitiationMenu.Click += btnInitiationMenu_Click;
-            // 
-            // btnHistoryMenu
-            // 
-            btnHistoryMenu.BackColor = Color.Transparent;
-            btnHistoryMenu.BackgroundImage = Properties.Resources.Factura;
-            btnHistoryMenu.BackgroundImageLayout = ImageLayout.Center;
-            btnHistoryMenu.FlatAppearance.BorderSize = 0;
-            btnHistoryMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(244, 214, 180);
-            btnHistoryMenu.FlatStyle = FlatStyle.Flat;
-            btnHistoryMenu.Location = new Point(43, 210);
-            btnHistoryMenu.Margin = new Padding(2);
-            btnHistoryMenu.Name = "btnHistoryMenu";
-            btnHistoryMenu.Size = new Size(91, 78);
-            btnHistoryMenu.TabIndex = 2;
-            btnHistoryMenu.UseVisualStyleBackColor = false;
-            btnHistoryMenu.Click += btnHistoryMenu_Click;
-            // 
-            // btnInformationMenu
-            // 
-            btnInformationMenu.BackColor = Color.Transparent;
-            btnInformationMenu.BackgroundImage = Properties.Resources.Informacion;
-            btnInformationMenu.BackgroundImageLayout = ImageLayout.Center;
-            btnInformationMenu.FlatAppearance.BorderSize = 0;
-            btnInformationMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(244, 214, 180);
-            btnInformationMenu.FlatStyle = FlatStyle.Flat;
-            btnInformationMenu.Location = new Point(43, 362);
-            btnInformationMenu.Margin = new Padding(2);
-            btnInformationMenu.Name = "btnInformationMenu";
-            btnInformationMenu.Size = new Size(91, 78);
-            btnInformationMenu.TabIndex = 1;
-            btnInformationMenu.UseVisualStyleBackColor = false;
-            btnInformationMenu.Click += btnInformationMenu_Click;
             // 
             // panelContenedor
             // 
@@ -166,8 +130,6 @@
         private Panel MenuVertical;
         private Button btnInitiationMenu;
         private Button btnCerrarMenu;
-        private Button btnHistoryMenu;
-        private Button btnInformationMenu;
         private Button btnInitiationM;
         public Panel panelContenedor;
     }

@@ -7,10 +7,10 @@
     <Compile Update="Visual Cliente\frmCatalogue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Visual Cliente\frmHistory.cs">
+    <Compile Update="VIsualAdministrador\frmHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Visual Cliente\frmInformation.cs">
+    <Compile Update="VIsualAdministrador\frmInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Visual Cliente\frmInicioMenu.cs">

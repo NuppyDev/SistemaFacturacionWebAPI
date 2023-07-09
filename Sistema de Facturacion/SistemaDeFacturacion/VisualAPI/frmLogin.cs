@@ -16,5 +16,32 @@ namespace VisualWebAPI
         {
             InitializeComponent();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '•';
+        }
+
+        private void btnOcultar_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+                txtPassword.PasswordChar = '\0';
+            else { txtPassword.PasswordChar = '•'; }
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+        }
+
+        private void txtUser_Click(object sender, EventArgs e)
+        {
+            txtUser.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

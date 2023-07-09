@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "50Hbasb9wyEVIt42z7LwURiWchLa+j+Ut8wo028iyKNOOolzG0748w+5i1wddJ30jLHWR6oX5hqePCLEhP+Zwg==",
+  "dgSpecHash": "sE8OBld7BlN5cC8QWjiid7o45JfyKe5dLfSkXRwm5eESNfhnYbJ9ADpTXG/rKiJ13n6pVzWroxEz31zhfpmMzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\SistemaFacturacionWebAPI\\Sistema de Facturacion\\SistemaDeFacturacion\\Controller\\Controler.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.18\\microsoft.aspnetcore.authentication.jwtbearer.6.0.18.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.7\\microsoft.aspnetcore.jsonpatch.7.0.7.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.16\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.16.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

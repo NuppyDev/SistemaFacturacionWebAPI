@@ -18,6 +18,7 @@ namespace WebAPI.Data
         public DbSet<Products> Products { get; set; }
         public DbSet<Tables> Tables { get; set; }
         public DbSet<InvoiceDescription> InvoiceDescription { get; set; }
+        public DbSet<User> Users { get; set; }  
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Waiters>()
@@ -81,6 +82,11 @@ namespace WebAPI.Data
                 new Products() { ProductsId = 10, Name = "Slice de Torta Marmoleada", CategoriesId = 2, UnitPrice = 20 },
                 new Products() { ProductsId = 11, Name = "Gomitas de Café", CategoriesId = 2, UnitPrice = 15 },
                 new Products() { ProductsId = 12, Name = "Papitas Fritas", CategoriesId = 2, UnitPrice = 35 }
+                );
+            modelBuilder.Entity<User>().HasData(
+                new User() { UserId = 1, Name = "Stephanie Tenorio", Usuario = "StephTeno19", Phone = "+50575064049", Password = "@LeonMiAmor", Role = "Administrador" },
+                new User() { UserId = 2, Name = "Nico Casimiro", Usuario = "Casi02Miro", Phone = "+50582855247", Password = "@LeonMiAmor", Role = "Cajero" },
+                new User() { UserId = 3, Name = "Cliente", Usuario = "Cliente", Password = "admin", Role = "Cliente" }
                 );
         }
     }

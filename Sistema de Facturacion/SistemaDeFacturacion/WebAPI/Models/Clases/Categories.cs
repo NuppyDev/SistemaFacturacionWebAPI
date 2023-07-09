@@ -5,8 +5,7 @@ namespace WebAPI.Models.Clases
 {
     public class Categories
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoriesId { get; set; }
         [Required]
         public string CategoryName { get; set; }

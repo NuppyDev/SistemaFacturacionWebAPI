@@ -6,8 +6,7 @@ namespace WebAPI.Models.Clases
 {
     public class Description
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DescriptionId { get; set; }
         [Required]
         public int InvoiceId { get; set; }

@@ -63,6 +63,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.18": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "6.0.18.0",
+            "fileVersion": "6.0.1823.26909"
+          }
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/7.0.7": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -848,6 +859,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ty1FXZY7ldrR5BvISJd1GtgyocTWiQlzrnqsxrC0ny826r8T6stYhDXwxujjFT2GWQb5dWprVNP7U8upiwaF2g==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.18",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.18.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/7.0.7": {
       "type": "package",

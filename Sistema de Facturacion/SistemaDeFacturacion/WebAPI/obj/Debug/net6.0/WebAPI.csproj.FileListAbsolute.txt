@@ -582,3 +582,4 @@ C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\Si
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Users\Usuario\source\repos\SistemaFacturacionWebAPI\Sistema de Facturacion\SistemaDeFacturacion\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
